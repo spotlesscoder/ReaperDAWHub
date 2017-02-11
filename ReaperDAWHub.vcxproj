@@ -80,7 +80,7 @@
     <OutDir>C:\Program Files\Reaper\Plugins\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>C:\Program Files\Reaper\Plugins\</OutDir>
+    <OutDir>C:\Program Files\Reaper (x64)\Plugins\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -109,7 +109,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\ReaperDAWHub.exe</OutputFile>
+      <OutputFile>$(OutDir)\reaper_dawhub.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib; msvcrt.lib;;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -236,7 +236,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\ReaperDAWHub.exe</OutputFile>
+      <OutputFile>$(OutDir)\reaper_dawhub.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -252,8 +252,6 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\action_entry.cpp" />
-    <ClCompile Include="Source\LoginWindow.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
@@ -1788,9 +1786,6 @@
     <ClCompile Include="JuceLibraryCode\juce_video.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\action_entry.h" />
-    <ClInclude Include="includes\LoginWindow.h" />
-    <ClInclude Include="includes\ReaperDAWHub.h" />
     <ClInclude Include="includes\reaper_plugin.h" />
     <ClInclude Include="includes\reaper_plugin_functions.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
