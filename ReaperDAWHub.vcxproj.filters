@@ -1914,12 +1914,6 @@
     <ClCompile Include="JuceLibraryCode\juce_video.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
-    <ClCompile Include="Source\action_entry.cpp">
-      <Filter>ReaperDAWHub\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\LoginWindow.cpp">
-      <Filter>ReaperDAWHub\Source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h">
@@ -3716,19 +3710,10 @@
     <ClInclude Include="JuceLibraryCode\JuceHeader.h">
       <Filter>Juce Library Code</Filter>
     </ClInclude>
-    <ClInclude Include="includes\ReaperDAWHub.h">
-      <Filter>ReaperDAWHub\includes</Filter>
-    </ClInclude>
     <ClInclude Include="includes\reaper_plugin.h">
       <Filter>ReaperDAWHub\includes</Filter>
     </ClInclude>
     <ClInclude Include="includes\reaper_plugin_functions.h">
-      <Filter>ReaperDAWHub\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\action_entry.h">
-      <Filter>ReaperDAWHub\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\LoginWindow.h">
       <Filter>ReaperDAWHub\includes</Filter>
     </ClInclude>
   </ItemGroup>
