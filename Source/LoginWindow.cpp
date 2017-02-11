@@ -1,5 +1,6 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "../includes/action_entry.h"
+#include "../includes/LoginWindow.h"
 #include "../includes/ReaperDAWHub.h"
 
 class MyWebBrowserComponent : public WebBrowserComponent
@@ -80,7 +81,7 @@ void toggleLoginWindow(action_entry&)
 	LoginWindow::initGUIifNeeded();
 	if (g_login_wnd == nullptr)
 	{
-		g_login_wnd = new LoginWindow(700, 400, true, Colours::black);
+		g_login_wnd = new LoginWindow(700, 400, true, reabgColour);
 		// This call order is important, the window should not be set visible
 		// before adding it into the Reaper window hierarchy
 		// Currently this only works for Windows, OS-X needs some really annoying special handling

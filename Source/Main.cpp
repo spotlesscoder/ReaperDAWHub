@@ -6,9 +6,11 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "../includes/action_entry.h"
 #include "../includes/LoginWindow.h"
+#include "../includes/ReaperDAWHub.h"
 
 reaper_plugin_info_t* g_plugin_info;
 bool g_juce_inited = false;
+Colour reabgColour;
 
 HINSTANCE g_hInst;
 HWND g_parent;
@@ -50,7 +52,7 @@ class BrowserComponent : public Component
 public:
 	BrowserComponent() : m_browser(&m_address_line)
 	{
-		m_address_line.setText("http://www.google.de/", dontSendNotification);
+		m_address_line.setText("http://www.reaper.fm/", dontSendNotification);
 		addAndMakeVisible(&m_address_line);
 		addAndMakeVisible(&m_browser);
 		m_browser.goToURL(m_address_line.getText());
@@ -132,12 +134,14 @@ extern "C"
 			g_plugin_info = rec;
 			g_parent = rec->hwnd_main;
 			if (REAPERAPI_LoadAPI(rec->GetFunc) > 0) return 0;
+			
+			reabgColour = Colours::grey;
 
 			add_action("JUCE test : Show browser", "JUCETEST_SHOW_BROWSER", CannotToggle, [](action_entry& ae)
 			{
 				toggleBrowserWindow(ae);
 			});
-			add_action("JUCE test : Show Login", "JUCETEST_SHOW_BROWSER", CannotToggle, [](action_entry& ae2)
+			add_action("JUCE test : Show Login", "JUCETEST_SHOW_Login", CannotToggle, [](action_entry& ae2)
 			{
 				toggleLoginWindow(ae2);
 			});

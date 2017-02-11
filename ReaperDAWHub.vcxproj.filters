@@ -1914,10 +1914,10 @@
     <ClCompile Include="JuceLibraryCode\juce_video.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
-    <ClCompile Include="LoginWindows.cpp">
+    <ClCompile Include="Source\action_entry.cpp">
       <Filter>ReaperDAWHub\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\action_entry.cpp">
+    <ClCompile Include="Source\LoginWindow.cpp">
       <Filter>ReaperDAWHub\Source</Filter>
     </ClCompile>
   </ItemGroup>
