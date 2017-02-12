@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ReaperDAWHub">
-      <UniqueIdentifier>{7C7151C3-8B8A-ED26-5AB6-49B48357B672}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Juce Modules">
       <UniqueIdentifier>{422C46B7-0467-2DB0-BF3C-16DFCAFD69AC}</UniqueIdentifier>
     </Filter>
@@ -346,19 +343,14 @@
     <Filter Include="Juce Library Code">
       <UniqueIdentifier>{8B4D1BAA-6DB4-CAEC-A0FA-271F354D5C61}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ReaperDAWHub\includes">
-      <UniqueIdentifier>{549d2748-b30b-492e-bae0-f57978434bd6}</UniqueIdentifier>
-      <Extensions>
-      </Extensions>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{f5d8b480-ee05-440b-a0d0-9e275ffcdc68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ReaperDAWHub\Source">
-      <UniqueIdentifier>{18149265-0CD4-BEBB-B125-BE7A508770BD}</UniqueIdentifier>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{15088d26-80ba-4794-856e-e5e67ddf0431}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Main.cpp">
-      <Filter>ReaperDAWHub\Source</Filter>
-    </ClCompile>
     <ClCompile Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <Filter>Juce Modules\juce_audio_basics\buffers</Filter>
     </ClCompile>
@@ -1917,10 +1909,16 @@
       <Filter>Juce Library Code</Filter>
     </ClCompile>
     <ClCompile Include="Source\action_entry.cpp">
-      <Filter>ReaperDAWHub\Source</Filter>
+      <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\LoginWindow.cpp">
-      <Filter>ReaperDAWHub\Source</Filter>
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SettingsManager.cpp">
+      <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3718,20 +3716,20 @@
     <ClInclude Include="JuceLibraryCode\JuceHeader.h">
       <Filter>Juce Library Code</Filter>
     </ClInclude>
-    <ClInclude Include="includes\reaper_plugin.h">
-      <Filter>ReaperDAWHub\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\reaper_plugin_functions.h">
-      <Filter>ReaperDAWHub\includes</Filter>
-    </ClInclude>
     <ClInclude Include="includes\action_entry.h">
-      <Filter>ReaperDAWHub\includes</Filter>
+      <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\LoginWindow.h">
-      <Filter>ReaperDAWHub\includes</Filter>
+      <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\Main.h">
-      <Filter>ReaperDAWHub\includes</Filter>
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\reaper_plugin.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\reaper_plugin_functions.h">
+      <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

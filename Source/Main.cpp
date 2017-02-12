@@ -133,7 +133,7 @@ extern "C"
 			g_plugin_info = rec;
 			g_parent = rec->hwnd_main;
 			if (REAPERAPI_LoadAPI(rec->GetFunc) > 0) return 0;
-
+			
 			add_action("JUCE test : Show browser", "JUCETEST_SHOW_BROWSER", CannotToggle, [](action_entry& ae)
 			{
 				toggleBrowserWindow(ae);
