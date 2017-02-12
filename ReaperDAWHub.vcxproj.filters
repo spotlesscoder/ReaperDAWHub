@@ -348,6 +348,8 @@
     </Filter>
     <Filter Include="ReaperDAWHub\includes">
       <UniqueIdentifier>{549d2748-b30b-492e-bae0-f57978434bd6}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
     </Filter>
     <Filter Include="ReaperDAWHub\Source">
       <UniqueIdentifier>{18149265-0CD4-BEBB-B125-BE7A508770BD}</UniqueIdentifier>
@@ -1913,6 +1915,12 @@
     </ClCompile>
     <ClCompile Include="JuceLibraryCode\juce_video.cpp">
       <Filter>Juce Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\action_entry.cpp">
+      <Filter>ReaperDAWHub\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LoginWindow.cpp">
+      <Filter>ReaperDAWHub\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3714,6 +3722,15 @@
       <Filter>ReaperDAWHub\includes</Filter>
     </ClInclude>
     <ClInclude Include="includes\reaper_plugin_functions.h">
+      <Filter>ReaperDAWHub\includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\action_entry.h">
+      <Filter>ReaperDAWHub\includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\LoginWindow.h">
+      <Filter>ReaperDAWHub\includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Main.h">
       <Filter>ReaperDAWHub\includes</Filter>
     </ClInclude>
   </ItemGroup>
