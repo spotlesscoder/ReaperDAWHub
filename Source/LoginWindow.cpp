@@ -94,7 +94,10 @@ void toggleLoginWindow()
 		// Currently this only works for Windows, OS-X needs some really annoying special handling
 		// not implemented yet
 #ifdef WIN32
-		if(g_plugin_info != NULL) {
+		//if plugin info != NULL, this should indicate that window is loaded from Reaper.
+		//Otherwise, (e.g. from the GUIDemo project) GetMainHwnd() will point to 0x0000000 which leads to a crash
+		if(g_plugin_info != NULL) { 
+			
 			g_login_wnd->addToDesktop(g_login_wnd->getDesktopWindowStyleFlags(), GetMainHwnd());
 		}
 #else
