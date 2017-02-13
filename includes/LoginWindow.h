@@ -2,6 +2,7 @@
 #include "Main.h"
 #include "action_entry.h"
 REAPERDAWHUBDLL_API void toggleLoginWindow(action_entry&);
+REAPERDAWHUBDLL_API void toggleLoginWindow();
 class LoginWindowComponent : public Component
 {
 public:

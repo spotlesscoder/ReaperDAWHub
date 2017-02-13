@@ -23,7 +23,7 @@ LoginWindowComponent::LoginWindowComponent() : m_btn("OK")
 		m_lbl_user_name.setText("User name:", dontSendNotification);
 		m_lbl_password.setText("Password:", dontSendNotification);
 
-		setSize(100, 60);
+		setSize(500, 600);
 	}
 void LoginWindowComponent::resized()
 	{
@@ -79,8 +79,11 @@ private:
 
 LoginWindow* g_login_wnd = nullptr;
 
-
 void toggleLoginWindow(action_entry&)
+{
+	toggleLoginWindow();
+}
+void toggleLoginWindow()
 {
 	LoginWindow::initGUIifNeeded();
 	if (g_login_wnd == nullptr)
@@ -91,7 +94,9 @@ void toggleLoginWindow(action_entry&)
 		// Currently this only works for Windows, OS-X needs some really annoying special handling
 		// not implemented yet
 #ifdef WIN32
-		g_login_wnd->addToDesktop(g_login_wnd->getDesktopWindowStyleFlags(), GetMainHwnd());
+		if(g_plugin_info != NULL) {
+			g_login_wnd->addToDesktop(g_login_wnd->getDesktopWindowStyleFlags(), GetMainHwnd());
+		}
 #else
 		w->addToDesktop(w->getDesktopWindowStyleFlags(), 0);
 		makeWindowFloatingPanel(w);
