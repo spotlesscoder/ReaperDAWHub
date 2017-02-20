@@ -3772,6 +3772,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\Source\LoginWindowComponent.cpp" />
     <ClCompile Include="Source\GUIDemo.cpp" />
     <ClCompile Include="Source\MainComponent.cpp" />
   </ItemGroup>

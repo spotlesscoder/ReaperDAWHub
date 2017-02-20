@@ -3725,6 +3725,9 @@
     <ClCompile Include="Source\MainComponent.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\Source\LoginWindowComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\JuceLibraryCode\modules\juce_audio_formats\codecs\flac\Flac Licence.txt">

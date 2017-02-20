@@ -5,9 +5,9 @@
 class LoginWindowComponent : public Component
 {
 public:
-	REAPERDAWHUBDLL_API LoginWindowComponent();
-	REAPERDAWHUBDLL_API ~LoginWindowComponent();
-	REAPERDAWHUBDLL_API void resized() override;
+	LoginWindowComponent();
+	~LoginWindowComponent();
+    void resized() override;
 
 
 private:

@@ -4,7 +4,7 @@ int lbl_width = 100;
 int cntrl_height = 19;
 int cntrl_spacing_y = 10;
 
-LoginWindowComponent::LoginWindowComponent() {
+LoginWindowComponent::LoginWindowComponent() : m_btn("OK") {
 	addAndMakeVisible(&m_password);
 	addAndMakeVisible(&m_user_name);
 	addAndMakeVisible(&m_btn);
@@ -32,7 +32,7 @@ void LoginWindowComponent::resized() {
 	m_user_name.setBounds(lbl_width, 0, getWidth() - lbl_width, cntrl_height);
 
 	m_lbl_password.setBounds(0, 30, lbl_width, cntrl_height);
-	m_password.setBounds(0, 30, getWidth(), cntrl_height);
+	m_password.setBounds(lbl_width, 30, getWidth(), cntrl_height);
 
 	m_btn.setBounds(0, 60, 50, cntrl_height);
 }
