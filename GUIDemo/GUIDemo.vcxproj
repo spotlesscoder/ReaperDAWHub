@@ -133,6 +133,7 @@
     <ClInclude Include="..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h" />
     <ClInclude Include="..\..\JUCE\modules\juce_opengl\juce_opengl.h" />
     <ClInclude Include="..\..\JUCE\modules\juce_video\juce_video.h" />
+    <ClInclude Include="..\includes\LoginWindowComponent.h" />
     <ClInclude Include="..\JuceLibraryCode\AppConfig.h" />
     <ClInclude Include="..\JuceLibraryCode\JuceHeader.h" />
     <ClInclude Include="..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
@@ -718,7 +719,8 @@
     <ClInclude Include="..\JuceLibraryCode\modules\juce_video\juce_video.h" />
     <ClInclude Include="..\JuceLibraryCode\modules\juce_video\playback\juce_DirectShowComponent.h" />
     <ClInclude Include="..\JuceLibraryCode\modules\juce_video\playback\juce_QuickTimeMovieComponent.h" />
-    <ClInclude Include="GUIDemo.h" />
+    <ClInclude Include="includes\GUIDemo.h" />
+    <ClInclude Include="includes\MainComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\JuceLibraryCode\juce_audio_basics.cpp" />
@@ -3770,7 +3772,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="GUIDemo.cpp" />
+    <ClCompile Include="Source\GUIDemo.cpp" />
+    <ClCompile Include="Source\MainComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReaperDAWHub.vcxproj">

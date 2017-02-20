@@ -254,6 +254,7 @@
   <ItemGroup>
     <ClCompile Include="Source\action_entry.cpp" />
     <ClCompile Include="Source\LoginWindow.cpp" />
+    <ClCompile Include="Source\LoginWindowComponent.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
@@ -1790,6 +1791,7 @@
   <ItemGroup>
     <ClInclude Include="includes\action_entry.h" />
     <ClInclude Include="includes\LoginWindow.h" />
+    <ClInclude Include="includes\LoginWindowComponent.h" />
     <ClInclude Include="includes\Main.h" />
     <ClInclude Include="includes\reaper_plugin.h" />
     <ClInclude Include="includes\reaper_plugin_functions.h" />

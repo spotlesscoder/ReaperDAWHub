@@ -10,7 +10,7 @@ It contains the basic startup code for a Juce application.
 
 
 #include "../JuceLibraryCode/JuceHeader.h"
-#include "GUIDemo.h"
+#include "../includes/GUIDemo.h"
 #include "../includes/LoginWindow.h"
 
 
@@ -68,8 +68,9 @@ public:
 			DocumentWindow::allButtons)
 		{
 			setUsingNativeTitleBar(true);
-			setContentNonOwned(new LoginWindowComponent(), true);
-			toggleLoginWindow();
+			setContentOwned(new LoginWindowComponent(), true);
+			
+			
 			centreWithSize(getWidth(), getHeight());
 			setVisible(true);
 		}

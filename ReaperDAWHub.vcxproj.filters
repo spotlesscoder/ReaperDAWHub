@@ -1911,13 +1911,13 @@
     <ClCompile Include="Source\action_entry.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Source\LoginWindow.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Source\SettingsManager.cpp">
+    <ClCompile Include="Source\LoginWindow.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LoginWindowComponent.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -3729,6 +3729,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\reaper_plugin_functions.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\LoginWindowComponent.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
