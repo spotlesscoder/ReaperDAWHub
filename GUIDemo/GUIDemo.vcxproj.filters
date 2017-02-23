@@ -2160,6 +2160,27 @@
     <ClInclude Include="..\includes\LoginWindowComponent.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\includes\ProjectBrowserComponent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\ProjectEntryComponent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\Components.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\LocalProjectEntryComponent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\LoginWindow.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\ProjectBrowserTabComponent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\includes\ProjectEntryListComponent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\JuceLibraryCode\juce_audio_basics.cpp">
@@ -3726,6 +3747,24 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\LoginWindowComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ProjectBrowserComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ProjectEntryComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GUIConstants.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\LocalProjectEntryComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ProjectBrowserTabComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\ProjectEntryListComponent.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,8 +1,5 @@
 #include "../includes/LoginWindowComponent.h"
 
-int lbl_width = 100;
-int cntrl_height = 19;
-int cntrl_spacing_y = 10;
 
 LoginWindowComponent::LoginWindowComponent() : m_btn("OK") {
 	addAndMakeVisible(&m_password);
@@ -19,7 +16,7 @@ LoginWindowComponent::LoginWindowComponent() : m_btn("OK") {
 
 	m_lbl_user_name.setText("User name:", dontSendNotification);
 	m_lbl_password.setText("Password:", dontSendNotification);
-
+	
 	setSize(500, 600);
 }
 

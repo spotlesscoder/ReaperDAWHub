@@ -6,6 +6,7 @@
 #include "JuceHeader.h"
 #include "action_entry.h"
 #include "LoginWindow.h"
+#include "Main.h"
 
 HINSTANCE g_hInst;
 HWND g_parent;

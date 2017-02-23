@@ -253,6 +253,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\action_entry.cpp" />
+    <ClCompile Include="Source\GUIConstants.cpp" />
+    <ClCompile Include="Source\LocalProjectEntryComponent.cpp" />
     <ClCompile Include="Source\LoginWindow.cpp" />
     <ClCompile Include="Source\LoginWindowComponent.cpp" />
     <ClCompile Include="Source\Main.cpp" />
@@ -1787,12 +1789,23 @@
     <ClCompile Include="JuceLibraryCode\juce_gui_extra.cpp" />
     <ClCompile Include="JuceLibraryCode\juce_opengl.cpp" />
     <ClCompile Include="JuceLibraryCode\juce_video.cpp" />
+    <ClCompile Include="Source\ProjectBrowserComponent.cpp" />
+    <ClCompile Include="Source\ProjectEntryComponent.cpp" />
+    <ClCompile Include="Source\ProjectEntryListComponent.cpp" />
+    <ClCompile Include="Source\ProjectBrowserTabComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\action_entry.h" />
+    <ClInclude Include="includes\Components.h" />
+    <ClInclude Include="includes\GUIConstants.h" />
+    <ClInclude Include="includes\LocalProjectEntryComponent.h" />
     <ClInclude Include="includes\LoginWindow.h" />
     <ClInclude Include="includes\LoginWindowComponent.h" />
     <ClInclude Include="includes\Main.h" />
+    <ClInclude Include="includes\ProjectBrowserComponent.h" />
+    <ClInclude Include="includes\ProjectBrowserTabComponent.h" />
+    <ClInclude Include="includes\ProjectEntryComponent.h" />
+    <ClInclude Include="includes\ProjectEntryListComponent.h" />
     <ClInclude Include="includes\reaper_plugin.h" />
     <ClInclude Include="includes\reaper_plugin_functions.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
