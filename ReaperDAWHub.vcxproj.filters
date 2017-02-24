@@ -343,11 +343,17 @@
     <Filter Include="Juce Library Code">
       <UniqueIdentifier>{8B4D1BAA-6DB4-CAEC-A0FA-271F354D5C61}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headerdateien">
+    <Filter Include="UI">
+      <UniqueIdentifier>{5aecfbcc-5a0d-4787-b8e2-85b70ec11f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Quelldateien">
+      <UniqueIdentifier>{15088d26-80ba-4794-856e-e5e67ddf0431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Headerdateien">
       <UniqueIdentifier>{f5d8b480-ee05-440b-a0d0-9e275ffcdc68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Quelldateien">
-      <UniqueIdentifier>{15088d26-80ba-4794-856e-e5e67ddf0431}</UniqueIdentifier>
+    <Filter Include="Comm">
+      <UniqueIdentifier>{c6ffc710-4ecd-43f0-9fb3-6ac12acb4cb8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1909,34 +1915,37 @@
       <Filter>Juce Library Code</Filter>
     </ClCompile>
     <ClCompile Include="Source\action_entry.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\Main.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\LoginWindow.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\LoginWindowComponent.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\ProjectBrowserComponent.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\ProjectEntryComponent.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\GUIConstants.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\LocalProjectEntryComponent.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\ProjectEntryListComponent.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\ProjectBrowserTabComponent.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>UI\Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TabBarNotifyComponent.cpp">
+      <Filter>UI\Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3735,43 +3744,46 @@
       <Filter>Juce Library Code</Filter>
     </ClInclude>
     <ClInclude Include="includes\action_entry.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\LoginWindow.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\Main.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\reaper_plugin.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\reaper_plugin_functions.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\LoginWindowComponent.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\ProjectBrowserComponent.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\GUIConstants.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\ProjectEntryComponent.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\LocalProjectEntryComponent.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\ProjectEntryListComponent.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\ProjectBrowserTabComponent.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\Components.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>UI\Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\TabBarNotifyComponent.h">
+      <Filter>UI\Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

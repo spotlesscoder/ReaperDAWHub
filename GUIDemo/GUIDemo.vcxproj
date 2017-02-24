@@ -141,6 +141,7 @@
     <ClInclude Include="..\includes\ProjectBrowserTabComponent.h" />
     <ClInclude Include="..\includes\ProjectEntryComponent.h" />
     <ClInclude Include="..\includes\ProjectEntryListComponent.h" />
+    <ClInclude Include="..\includes\TabBarNotifyComponent.h" />
     <ClInclude Include="..\JuceLibraryCode\AppConfig.h" />
     <ClInclude Include="..\JuceLibraryCode\JuceHeader.h" />
     <ClInclude Include="..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
@@ -3786,6 +3787,7 @@
     <ClCompile Include="..\Source\ProjectBrowserTabComponent.cpp" />
     <ClCompile Include="..\Source\ProjectEntryComponent.cpp" />
     <ClCompile Include="..\Source\ProjectEntryListComponent.cpp" />
+    <ClCompile Include="..\Source\TabBarNotifyComponent.cpp" />
     <ClCompile Include="Source\GUIDemo.cpp" />
     <ClCompile Include="Source\MainComponent.cpp" />
   </ItemGroup>

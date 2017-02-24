@@ -2181,6 +2181,9 @@
     <ClInclude Include="..\includes\ProjectEntryListComponent.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\includes\TabBarNotifyComponent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\JuceLibraryCode\juce_audio_basics.cpp">
@@ -3765,6 +3768,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\ProjectEntryListComponent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\TabBarNotifyComponent.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

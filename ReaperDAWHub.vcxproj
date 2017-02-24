@@ -1793,6 +1793,7 @@
     <ClCompile Include="Source\ProjectEntryComponent.cpp" />
     <ClCompile Include="Source\ProjectEntryListComponent.cpp" />
     <ClCompile Include="Source\ProjectBrowserTabComponent.cpp" />
+    <ClCompile Include="Source\TabBarNotifyComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\action_entry.h" />
@@ -1808,6 +1809,7 @@
     <ClInclude Include="includes\ProjectEntryListComponent.h" />
     <ClInclude Include="includes\reaper_plugin.h" />
     <ClInclude Include="includes\reaper_plugin_functions.h" />
+    <ClInclude Include="includes\TabBarNotifyComponent.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioSampleBuffer.h" />
