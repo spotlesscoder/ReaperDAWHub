@@ -10,6 +10,7 @@ class TabBarNotifyComponent : public Component
 		void paint(Graphics &g) override;
 		void notify();
 		void clearNotifications();
+		void init(TabBarButton *parentComponent);
 
 	private:
 		uint8_t notificationCounter = 0;

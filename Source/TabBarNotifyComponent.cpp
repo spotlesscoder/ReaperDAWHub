@@ -9,11 +9,15 @@ TabBarNotifyComponent::TabBarNotifyComponent()
 	lblNumNotifications.setFont(f);
 }
 
+void TabBarNotifyComponent::init(TabBarButton *parentComponent) {
+	addMouseListener(parentComponent, true);
+}
+
 void TabBarNotifyComponent::paint(Graphics& g)
 {
 	if (notificationCounter > 0) {
 		g.setColour(notificationBubbleColour);
-		g.fillEllipse(2, 7, 15, 15);
+		g.fillEllipse(0, 7, 15, 15);
 	}
 }
 
@@ -30,8 +34,8 @@ void TabBarNotifyComponent::notify() {
 		setVisible(true);
 	}
 	if (notificationCounter > 0) {
-		setSize(20, 20);
-		lblNumNotifications.setBounds(0, 4, 20, 20);
+		setSize(18, 20);
+		lblNumNotifications.setBounds(-2, 4, 20, 20);
 		lblNumNotifications.setVisible(true);
 	}
 }

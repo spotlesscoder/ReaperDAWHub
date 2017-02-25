@@ -8,10 +8,8 @@ ProjectBrowserTabComponent::ProjectBrowserTabComponent() : TabbedComponent(Tabbe
 	setSize(getLocalBounds().getWidth(), getLocalBounds().getHeight());
 	TabBarNotifyComponent *tbnc = new TabBarNotifyComponent();
 	tbnc->notify();
+	tbnc->init(getTabbedButtonBar().getTabButton(2));
 	getTabbedButtonBar().getTabButton(2)->setExtraComponent(tbnc, TabBarButton::afterText);
-	const Rectangle<int> bounds = getTabbedButtonBar().getTabButton(2)->getBounds();
-	getTabbedButtonBar().getTabButton(2)->setBounds(bounds.getX(), bounds.getY(), bounds.getWidth() - 10, bounds.getHeight());
-	tbnc->setBounds(-20, 0, (*(tbnc)).getWidth(), (*(tbnc)).getHeight());
 }
 
 ProjectBrowserTabComponent::~ProjectBrowserTabComponent() {
