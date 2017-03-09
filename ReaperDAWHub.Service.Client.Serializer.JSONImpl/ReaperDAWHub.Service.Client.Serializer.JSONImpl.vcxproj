@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A2B523C8-9A29-4589-983E-9935C0FB81D1}</ProjectGuid>
-    <RootNamespace>ReaperDAWHubServiceClientImpl</RootNamespace>
+    <ProjectGuid>{C6D79BDD-29B8-4377-8803-4D47275EB7BB}</ProjectGuid>
+    <RootNamespace>ReaperDAWHubServiceClientSerializerJSONImpl</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>ReaperDAWHub.Service.Client.JSONImpl</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -110,6 +109,8 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

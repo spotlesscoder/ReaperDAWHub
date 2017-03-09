@@ -22,6 +22,7 @@
     <ProjectGuid>{F6C1C3A0-3757-4546-B461-A8F598E51D75}</ProjectGuid>
     <RootNamespace>ReaperDAWHubServiceClientAPIImplTest</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>ReaperDAWHub.Service.Client.API.JSONImplTest</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
