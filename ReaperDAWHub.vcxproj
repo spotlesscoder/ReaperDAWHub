@@ -28,6 +28,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -75,6 +76,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
+    <LibraryPath>C:\Program Files %28x86%29\REAPER\Plugins;..\Debug;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>C:\Program Files\Reaper\Plugins\</OutDir>
@@ -94,16 +97,21 @@
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>JuceLibraryCode;JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2015_5C1=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader />
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;%(PreprocessorDefinitions);JUCER_VS2015_5C1=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(IntDir)\</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+      <SDLCheck>true</SDLCheck>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -114,10 +122,13 @@
       <IgnoreSpecificDefaultLibraries>libcmt.lib; msvcrt.lib;;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)\ReaperDAWHub.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <LargeAddressAware>true</LargeAddressAware>
+      <LargeAddressAware>
+      </LargeAddressAware>
+      <ImportLibrary />
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -253,10 +264,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\action_entry.cpp" />
-    <ClCompile Include="Source\GUIConstants.cpp" />
-    <ClCompile Include="Source\LocalProjectEntryComponent.cpp" />
-    <ClCompile Include="Source\LoginWindow.cpp" />
-    <ClCompile Include="Source\LoginWindowComponent.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
@@ -1789,27 +1796,12 @@
     <ClCompile Include="JuceLibraryCode\juce_gui_extra.cpp" />
     <ClCompile Include="JuceLibraryCode\juce_opengl.cpp" />
     <ClCompile Include="JuceLibraryCode\juce_video.cpp" />
-    <ClCompile Include="Source\ProjectBrowserComponent.cpp" />
-    <ClCompile Include="Source\ProjectEntryComponent.cpp" />
-    <ClCompile Include="Source\ProjectEntryListComponent.cpp" />
-    <ClCompile Include="Source\ProjectBrowserTabComponent.cpp" />
-    <ClCompile Include="Source\TabBarNotifyComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\action_entry.h" />
-    <ClInclude Include="includes\Components.h" />
-    <ClInclude Include="includes\GUIConstants.h" />
-    <ClInclude Include="includes\LocalProjectEntryComponent.h" />
-    <ClInclude Include="includes\LoginWindow.h" />
-    <ClInclude Include="includes\LoginWindowComponent.h" />
     <ClInclude Include="includes\Main.h" />
-    <ClInclude Include="includes\ProjectBrowserComponent.h" />
-    <ClInclude Include="includes\ProjectBrowserTabComponent.h" />
-    <ClInclude Include="includes\ProjectEntryComponent.h" />
-    <ClInclude Include="includes\ProjectEntryListComponent.h" />
     <ClInclude Include="includes\reaper_plugin.h" />
     <ClInclude Include="includes\reaper_plugin_functions.h" />
-    <ClInclude Include="includes\TabBarNotifyComponent.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h" />
     <ClInclude Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioSampleBuffer.h" />
@@ -2417,6 +2409,11 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ReaperDAWHub.GUI\ReaperDAWHub.GUI.vcxproj">
+      <Project>{d29ab73d-b8b2-4d6b-b804-39b01249bd58}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

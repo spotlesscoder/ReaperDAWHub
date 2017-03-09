@@ -10,7 +10,7 @@ ProjectEntryComponent::ProjectEntryComponent() {
 	addAndMakeVisibleWithListener(lbl_version);
 	addAndMakeVisibleWithListener(lbl_date);
 
-	setSize(200, 100);
+	setSize(200, 50);
 }
 
 ProjectEntryComponent::~ProjectEntryComponent() {
@@ -22,7 +22,7 @@ ProjectEntryComponent::ProjectEntryComponent(std::string name, std::string versi
 void ProjectEntryComponent::resized() {
 	lbl_name.setBounds(0, 0, getWidth(), cntrl_height);
 	lbl_version.setBounds(0, cntrl_height + cntrl_height, getWidth(), cntrl_height);
-	lbl_date.setBounds(getWidth() - 50, cntrl_height + cntrl_height, getWidth(), cntrl_height);
+	lbl_date.setBounds(getWidth() - 125, cntrl_height + cntrl_height, getWidth(), cntrl_height);
 
 	Font f_name = lbl_name.getFont();
 	f_name.setHeight(font_height+10);

@@ -9,10 +9,10 @@ It contains the basic startup code for a Juce application.
 */
 
 
-#include "../JuceLibraryCode/JuceHeader.h"
+#include "../../JuceLibraryCode/JuceHeader.h"
 #include "../includes/GUIDemo.h"
-#include "../includes/LoginWindow.h"
-#include "../includes/ProjectBrowserComponent.h"
+#include "../../ReaperDAWHub.GUI/includes/LoginWindow.h"
+#include "../../ReaperDAWHub.GUI/includes/ProjectBrowserComponent.h"
 
 
 //==============================================================================

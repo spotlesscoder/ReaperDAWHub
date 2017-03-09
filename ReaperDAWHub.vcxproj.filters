@@ -352,9 +352,6 @@
     <Filter Include="UI\Headerdateien">
       <UniqueIdentifier>{f5d8b480-ee05-440b-a0d0-9e275ffcdc68}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Comm">
-      <UniqueIdentifier>{c6ffc710-4ecd-43f0-9fb3-6ac12acb4cb8}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -1918,33 +1915,6 @@
       <Filter>UI\Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\Main.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\LoginWindow.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\LoginWindowComponent.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ProjectBrowserComponent.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ProjectEntryComponent.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\GUIConstants.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\LocalProjectEntryComponent.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ProjectEntryListComponent.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\ProjectBrowserTabComponent.cpp">
-      <Filter>UI\Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\TabBarNotifyComponent.cpp">
       <Filter>UI\Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -3746,9 +3716,6 @@
     <ClInclude Include="includes\action_entry.h">
       <Filter>UI\Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="includes\LoginWindow.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="includes\Main.h">
       <Filter>UI\Headerdateien</Filter>
     </ClInclude>
@@ -3756,33 +3723,6 @@
       <Filter>UI\Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="includes\reaper_plugin_functions.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\LoginWindowComponent.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\ProjectBrowserComponent.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\GUIConstants.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\ProjectEntryComponent.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\LocalProjectEntryComponent.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\ProjectEntryListComponent.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\ProjectBrowserTabComponent.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\Components.h">
-      <Filter>UI\Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\TabBarNotifyComponent.h">
       <Filter>UI\Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

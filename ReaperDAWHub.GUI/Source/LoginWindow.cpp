@@ -1,6 +1,6 @@
-#include "JuceHeader.h"
-#include "Main.h"
-#include "LoginWindow.h"
+#include "../../JuceLibraryCode/JuceHeader.h"
+#include "../../includes/Main.h"
+#include "../includes/LoginWindow.h"
 
 class LoginWindow : public ResizableWindow
 {

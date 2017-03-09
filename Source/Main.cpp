@@ -3,10 +3,10 @@
 #include <memory>
 #include <vector>
 #include <functional>
-#include "JuceHeader.h"
-#include "action_entry.h"
-#include "LoginWindow.h"
-#include "Main.h"
+#include "../JuceLibraryCode/JuceHeader.h"
+#include "../includes/action_entry.h"
+#include "../ReaperDAWHub.GUI/includes/LoginWindow.h"
+#include "../includes/Main.h"
 
 HINSTANCE g_hInst;
 HWND g_parent;

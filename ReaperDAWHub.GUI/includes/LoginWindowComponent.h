@@ -1,7 +1,6 @@
 #pragma once
-#include "../JuceLibraryCode/JuceHeader.h"
-#include "../includes/Main.h"
-#include "../includes/GUIConstants.h"
+#include "../../JuceLibraryCode/JuceHeader.h"
+#include "GUIConstants.h"
 
 class LoginWindowComponent : public Component
 {

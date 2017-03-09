@@ -1,6 +1,5 @@
 #pragma once
-#include "../JuceLibraryCode/JuceHeader.h"
-#include "../includes/Main.h"
+#include "../../JuceLibraryCode/JuceHeader.h"
 #include "GUIConstants.h"
 #include "ProjectEntryComponent.h"
 #include "LocalProjectEntryComponent.h"

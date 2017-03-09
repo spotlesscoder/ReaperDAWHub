@@ -1,5 +1,5 @@
 #pragma once
-#include "../JuceLibraryCode/JuceHeader.h";
+#include "../../JuceLibraryCode/JuceHeader.h";
 
 class ProjectEntryComponent : public Component
 {
@@ -11,8 +11,6 @@ public:
 	void paint(Graphics & g) override;
 	void mouseEnter(const MouseEvent &) override;
 
-	
-
 private:
 	Label lbl_name;
 	Label lbl_version;
@@ -21,5 +19,4 @@ private:
 	
 	void mouseExit(const MouseEvent &);
 	void addAndMakeVisibleWithListener(Component &child);
-
 };
