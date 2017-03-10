@@ -22,6 +22,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serializer.JSONImpl", "ReaperDAWHub.Service.Client.Serializer.JSONImpl\ReaperDAWHub.Service.Client.Serializer.JSONImpl.vcxproj", "{C6D79BDD-29B8-4377-8803-4D47275EB7BB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serializer.JSONImplTest", "ReaperDAWHub.Service.Client.Serializer.JSONImplTest\ReaperDAWHub.Service.Client.Serializer.JSONImplTest.vcxproj", "{55DFD6BF-B251-4FA2-991C-60164B2B407D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -109,6 +111,14 @@ Global
 		{C6D79BDD-29B8-4377-8803-4D47275EB7BB}.Release|Win32.Build.0 = Release|Win32
 		{C6D79BDD-29B8-4377-8803-4D47275EB7BB}.Release|x64.ActiveCfg = Release|x64
 		{C6D79BDD-29B8-4377-8803-4D47275EB7BB}.Release|x64.Build.0 = Release|x64
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Debug|Win32.Build.0 = Debug|Win32
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Debug|x64.ActiveCfg = Debug|x64
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Debug|x64.Build.0 = Debug|x64
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Release|Win32.ActiveCfg = Release|Win32
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Release|Win32.Build.0 = Release|Win32
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Release|x64.ActiveCfg = Release|x64
+		{55DFD6BF-B251-4FA2-991C-60164B2B407D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,8 @@
+[requires]
+rapidjson/1.0.2-1@lasote/vcpkg
+Catch/1.7.2@gasuketsu/testing
+
+[options]
+
+[generators]
+visual_studio

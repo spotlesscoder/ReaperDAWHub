@@ -18,9 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\JSONDeserializerTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\JSONDeserializerTest.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C6D79BDD-29B8-4377-8803-4D47275EB7BB}</ProjectGuid>
-    <RootNamespace>ReaperDAWHubServiceClientSerializerJSONImpl</RootNamespace>
+    <ProjectGuid>{55DFD6BF-B251-4FA2-991C-60164B2B407D}</ProjectGuid>
+    <RootNamespace>ReaperDAWHubServiceClientSerializerJSONImplTest</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -79,6 +85,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Lib>
+      <SubSystem>Console</SubSystem>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

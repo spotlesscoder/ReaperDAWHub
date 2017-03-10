@@ -110,9 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Project.cpp" />
     <ClCompile Include="Source\User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="includes\Project.h" />
     <ClInclude Include="includes\User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

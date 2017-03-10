@@ -15,18 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\User.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="includes\Project.h">
+    <ClInclude Include="includes\JSONDeserializerTest.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\User.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Project.cpp">
+    <ClCompile Include="Source\JSONDeserializerTest.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
