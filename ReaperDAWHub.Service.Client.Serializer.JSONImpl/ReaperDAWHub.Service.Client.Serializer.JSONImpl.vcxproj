@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\JSONDeserializer.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C6D79BDD-29B8-4377-8803-4D47275EB7BB}</ProjectGuid>
     <RootNamespace>ReaperDAWHubServiceClientSerializerJSONImpl</RootNamespace>
