@@ -20,6 +20,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\JSONDeserializer.h" />
+    <ClInclude Include="includes\JSONSerializer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\JSONDeserializer.cpp" />
+    <ClCompile Include="Source\JSONSerializer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaperDAWHub.Model\ReaperDAWHub.Model.vcxproj">
+      <Project>{bfe23995-599b-4a4c-b1b8-24d522114c29}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaperDAWHub.Service.Client.Serialization.API\ReaperDAWHub.Service.Client.Serialization.API.vcxproj">
+      <Project>{295b8458-68e1-4c0d-aaa3-dfac24fae6e3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C6D79BDD-29B8-4377-8803-4D47275EB7BB}</ProjectGuid>
@@ -28,7 +41,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -75,7 +88,9 @@
     <Import Project="..\conanbuildinfo.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>

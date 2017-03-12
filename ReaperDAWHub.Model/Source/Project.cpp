@@ -1,13 +1,11 @@
 #include "../includes/Project.h"
 
-long Project::getId()
-{
-	return id;
+void Project::setId(long id) {
+	this->id = id;
 }
 
-void Project::setId(long id)
-{
-	this->id = id;
+long Project::getId() {
+	return id;
 }
 
 std::string Project::getName()

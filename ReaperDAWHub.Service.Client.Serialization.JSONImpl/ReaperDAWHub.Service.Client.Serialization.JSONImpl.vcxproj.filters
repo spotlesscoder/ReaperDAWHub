@@ -18,5 +18,16 @@
     <ClInclude Include="includes\JSONDeserializer.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="includes\JSONSerializer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\JSONDeserializer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\JSONSerializer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

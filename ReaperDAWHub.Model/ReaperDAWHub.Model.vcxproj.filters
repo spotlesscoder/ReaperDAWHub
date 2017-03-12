@@ -21,12 +21,21 @@
     <ClInclude Include="includes\Project.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="includes\IEntity.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Entity.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\User.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Source\Project.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Entity.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

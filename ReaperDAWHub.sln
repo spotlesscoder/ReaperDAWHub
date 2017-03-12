@@ -18,11 +18,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Model", "Reape
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.JSON", "ReaperDAWHub.Service.Client.JSON\ReaperDAWHub.Service.Client.JSON.vcxproj", "{390B4F3F-769D-4B5E-BB37-42C78D46CA04}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serializer.API", "ReaperDAWHub.Service.Client.Serializer.API\ReaperDAWHub.Service.Client.Serializer.API.vcxproj", "{295B8458-68E1-4C0D-AAA3-DFAC24FAE6E3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serialization.API", "ReaperDAWHub.Service.Client.Serialization.API\ReaperDAWHub.Service.Client.Serialization.API.vcxproj", "{295B8458-68E1-4C0D-AAA3-DFAC24FAE6E3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serializer.JSONImpl", "ReaperDAWHub.Service.Client.Serializer.JSONImpl\ReaperDAWHub.Service.Client.Serializer.JSONImpl.vcxproj", "{C6D79BDD-29B8-4377-8803-4D47275EB7BB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serialization.JSONImpl", "ReaperDAWHub.Service.Client.Serialization.JSONImpl\ReaperDAWHub.Service.Client.Serialization.JSONImpl.vcxproj", "{C6D79BDD-29B8-4377-8803-4D47275EB7BB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serializer.JSONImplTest", "ReaperDAWHub.Service.Client.Serializer.JSONImplTest\ReaperDAWHub.Service.Client.Serializer.JSONImplTest.vcxproj", "{55DFD6BF-B251-4FA2-991C-60164B2B407D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Serialization.JSONImplTest", "ReaperDAWHub.Service.Client.Serialization.JSONImplTest\ReaperDAWHub.Service.Client.Serialization.JSONImplTest.vcxproj", "{55DFD6BF-B251-4FA2-991C-60164B2B407D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -24,6 +24,11 @@
   <ItemGroup>
     <ClCompile Include="Source\JSONDeserializerTest.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaperDAWHub.Service.Client.Serialization.JSONImpl\ReaperDAWHub.Service.Client.Serialization.JSONImpl.vcxproj">
+      <Project>{c6d79bdd-29b8-4377-8803-4d47275eb7bb}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{55DFD6BF-B251-4FA2-991C-60164B2B407D}</ProjectGuid>
     <RootNamespace>ReaperDAWHubServiceClientSerializerJSONImplTest</RootNamespace>
@@ -100,7 +105,7 @@
       <AssemblyDebug>true</AssemblyDebug>
     </Link>
     <PostBuildEvent>
-      <Command>cd $(TargetDir) &amp;&amp; ReaperDAWHub.Service.Client.Serializer.JSONImplTest.exe</Command>
+      <Command>cd $(TargetDir) &amp;&amp; ReaperDAWHub.Service.Client.Serialization.JSONImplTest.exe</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
