@@ -18,7 +18,12 @@ It should look somehow like this:
    -examples
    -extras
    -modules
-  -ReaperDAWHub
+  -ReaperDAWHub.*
+
+Install python 3.5 and install the package manager "conan" using the command "pip install conan"
+
+In the checkout root, execute "conan install"
+Conan might ask you to build the missing packages (append a "--build <package name>" for every package it complains about)
 
 Run VS2015 as administrator (because build output is directly written to Reaper program dir)
 
