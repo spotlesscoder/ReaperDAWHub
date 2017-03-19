@@ -21,8 +21,8 @@ bool isReady(std::future<R> const& f)
 ProjectBrowserComponent::ProjectBrowserComponent() : m_btn("OK") {
 
 	addAndMakeVisible(m_tabs);
-//	setHandler(&m_btn);
 	setSize(500, 600);
+	initData();
 }
 
 ProjectBrowserComponent::~ProjectBrowserComponent() {

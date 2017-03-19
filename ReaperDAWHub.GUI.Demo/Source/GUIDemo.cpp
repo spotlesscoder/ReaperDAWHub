@@ -20,7 +20,8 @@ class NewProjectApplication : public JUCEApplication
 {
 public:
 	//==============================================================================
-	NewProjectApplication() {}
+	NewProjectApplication() {
+	}
 
 	const String getApplicationName() override { return ProjectInfo::projectName; }
 	const String getApplicationVersion() override { return ProjectInfo::versionString; }
@@ -33,7 +34,6 @@ public:
 
 		mainWindow = new MainWindow(getApplicationName());
 		projectBrowserWindow = new ProjectBrowserWindow(getApplicationName());
-		projectBrowserWindow->init();
 	}
 
 	void shutdown() override
