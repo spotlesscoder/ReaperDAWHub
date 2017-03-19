@@ -12,7 +12,9 @@ std::vector<Project> ProjectsController::getProjects() {
 	if(serviceClient != nullptr) {
 		try
 		{
-			boost::this_thread::sleep(boost::posix_time::seconds(100));
+			std::cout << "controller requesting projs";
+			boost::this_thread::sleep(boost::posix_time::seconds(5));
+			std::cout << "controller requested projs";
 			result = serviceClient->getAvailableProjects();
 		}
 		catch (const std::exception&)

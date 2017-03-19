@@ -18,16 +18,19 @@
 template<typename R>
 bool isReady(std::future<R> const& f)
 {
-	return f.valid() && f.wait_for(std::chrono::seconds(0)) == std::future_status::ready;
+	return f.wait_for(std::chrono::seconds(-1)) == std::future_status::ready;
 }
 
 ProjectBrowserComponent::ProjectBrowserComponent() : m_btn("OK") {
 
 	addAndMakeVisible(m_tabs);
-    std::future<std::vector<Project>> f = std::async(&ProjectsController::getProjects,&pc);
+	std::cout << "requesting projs";
+	std::future<std::vector<Project>> f = std::async(std::launch::async, &ProjectsController::getProjects, &pc);
+	std::cout << "requested projs";
 	std::vector<Project> projs;
 	if (isReady(f)) {
 		projs = f.get();
+		std::cout << "got projs";
 	}
 	setSize(500, 600);
 }
