@@ -105,7 +105,7 @@
       <AssemblyDebug>true</AssemblyDebug>
     </Link>
     <PostBuildEvent>
-      <Command>cd $(TargetDir) &amp;&amp; ReaperDAWHub.Service.Client.Serialization.JSONImplTest.exe</Command>
+      <Command>cd $(TargetDir) &amp;&amp; $(TargetName).exe</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

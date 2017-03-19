@@ -1,5 +1,5 @@
 #pragma once
-__interface IProjectEntryComponent : Co
+__interface IProjectEntryComponent : Component
 {
 public:
 	void resized() override;

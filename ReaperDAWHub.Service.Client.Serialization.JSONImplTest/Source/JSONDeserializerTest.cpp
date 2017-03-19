@@ -20,7 +20,7 @@ TEST_CASE("Deserialize project JSON") {
 
 	string str = JSONSerializer<Project>::serialize(project);
 	string str2 = JSONSerializer<User>::serialize(user);
-	REQUIRE(str == "abc"); //only shows usage examples ... fails at the moment. serialization needs to be implemented
+	REQUIRE(str == "abc"); //only shows usage examples ... fails at intendedly the moment. serialization needs to be implemented
 	REQUIRE(str2 == "cde"); 
 
 	cout << "String:  " << str;

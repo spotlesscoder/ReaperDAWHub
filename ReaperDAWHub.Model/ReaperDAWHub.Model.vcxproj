@@ -117,6 +117,7 @@
     <ClCompile Include="Source\User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="includes\Entities.h" />
     <ClInclude Include="includes\Entity.h" />
     <ClInclude Include="includes\IEntity.h" />
     <ClInclude Include="includes\Project.h" />

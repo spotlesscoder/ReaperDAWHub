@@ -1,11 +1,8 @@
 #pragma once
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "GUIConstants.h"
-#include "ProjectEntryComponent.h"
-#include "LocalProjectEntryComponent.h"
 #include "ProjectBrowserTabComponent.h"
-#include "ProjectEntryListComponent.h"
-
+#include "../../ReaperDAWHub.Controller/includes/ProjectsController.h"
 class ProjectBrowserComponent : public Component
 {
 public:
@@ -20,4 +17,5 @@ private:
 	Label lbl_name;
 	Label lbl_version;
 	ProjectBrowserTabComponent m_tabs;
+	ProjectsController pc;
 };

@@ -33,7 +33,7 @@ std::chrono::system_clock::time_point Project::getLastModified()
 	return lastModified;
 }
 
-void Project::setLastModified(std::chrono::system_clock::time_point lastModified)
+void Project::setLastModified(std::chrono::time_point<std::chrono::system_clock> lastModified)
 {
 	this->lastModified = lastModified;
 }

@@ -19,14 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A2B523C8-9A29-4589-983E-9935C0FB81D1}</ProjectGuid>
-    <RootNamespace>ReaperDAWHubServiceClientImpl</RootNamespace>
+    <ProjectGuid>{01056804-DCDE-4092-9B76-346DD75C98E0}</ProjectGuid>
+    <RootNamespace>ReaperDAWHubController</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>ReaperDAWHub.Service.Client.JSONImpl</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -69,12 +68,15 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -110,6 +112,22 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\EventListeningObservable.h" />
+    <ClInclude Include="includes\IEventListeningObservable.h" />
+    <ClInclude Include="includes\ProjectsController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\ProjectsController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaperDAWHub.Service.Client.API\ReaperDAWHub.Service.Client.API.vcxproj">
+      <Project>{3ec2c1b8-975e-4ba0-8c9a-5c122d768188}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaperDAWHub.Service.Client.RESTImpl\ReaperDAWHub.Service.Client.RESTImpl.vcxproj.vcxproj">
+      <Project>{a2b523c8-9a29-4589-983e-9935c0fb81d1}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
