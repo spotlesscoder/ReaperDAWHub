@@ -33,6 +33,7 @@ public:
 
 		mainWindow = new MainWindow(getApplicationName());
 		projectBrowserWindow = new ProjectBrowserWindow(getApplicationName());
+		projectBrowserWindow->init();
 	}
 
 	void shutdown() override
@@ -105,7 +106,8 @@ public:
 			DocumentWindow::allButtons)
 		{
 			setUsingNativeTitleBar(true);
-			setContentOwned(new ProjectBrowserComponent(), true);
+			pc = new ProjectBrowserComponent();
+			setContentOwned(pc, true);		
 
 
 			centreWithSize(getWidth(), getHeight());
@@ -126,8 +128,11 @@ public:
 		you really have to override any DocumentWindow methods, make sure your
 		subclass also calls the superclass's method.
 		*/
-
+		void init() {
+			pc->initData();
+		}
 	private:
+		ProjectBrowserComponent *pc;
 		JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ProjectBrowserWindow)
 	};
 

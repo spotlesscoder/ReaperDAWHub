@@ -2,14 +2,17 @@
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "GUIConstants.h"
 #include "ProjectBrowserTabComponent.h"
+#include "../includes/ButtonListenerHandler.h"
 #include "../../ReaperDAWHub.Controller/includes/ProjectsController.h"
-class ProjectBrowserComponent : public Component
+
+
+class ProjectBrowserComponent : public Component, public ButtonListenerHandler
 {
 public:
 	ProjectBrowserComponent();
 	~ProjectBrowserComponent();
 	void resized() override;
-
+	void initData();
 
 private:
 	GroupComponent g_group;

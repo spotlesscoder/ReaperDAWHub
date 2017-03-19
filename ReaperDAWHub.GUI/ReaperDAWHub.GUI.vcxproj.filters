@@ -42,6 +42,9 @@
     <ClCompile Include="Source\TabBarNotifyComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\ButtonListenerHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\Components.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="includes\TabBarNotifyComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\ButtonListenerHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
