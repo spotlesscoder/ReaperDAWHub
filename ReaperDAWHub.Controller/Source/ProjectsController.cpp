@@ -1,5 +1,7 @@
 #include "../includes/ProjectsController.h"
 #include "../../ReaperDAWHub.Service.Client.RESTImpl/includes/RESTClient.h"
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/thread/thread.hpp> 
 
 ProjectsController::ProjectsController() {
 	serviceClient = new RestClient;
@@ -10,6 +12,7 @@ std::vector<Project> ProjectsController::getProjects() {
 	if(serviceClient != nullptr) {
 		try
 		{
+			boost::this_thread::sleep(boost::posix_time::seconds(100));
 			result = serviceClient->getAvailableProjects();
 		}
 		catch (const std::exception&)
