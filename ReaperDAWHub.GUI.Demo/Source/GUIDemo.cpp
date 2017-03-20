@@ -8,7 +8,7 @@ It contains the basic startup code for a Juce application.
 ==============================================================================
 */
 
-
+#define WIN32_LEAN_AND_MEAN
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "../includes/GUIDemo.h"
 #include "../../ReaperDAWHub.GUI/includes/LoginWindow.h"
