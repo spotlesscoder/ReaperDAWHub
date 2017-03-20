@@ -17,6 +17,13 @@ ProjectEntryComponent::~ProjectEntryComponent() {
 }
 
 ProjectEntryComponent::ProjectEntryComponent(std::string name, std::string version) {
+	lbl_name.setText(name, dontSendNotification);
+	lbl_version.setText(version, dontSendNotification);
+	addAndMakeVisible(lbl_name);
+	addAndMakeVisible(lbl_version);
+	addAndMakeVisible(lbl_date);
+
+	setSize(200, 50);
 }
 
 void ProjectEntryComponent::resized() {

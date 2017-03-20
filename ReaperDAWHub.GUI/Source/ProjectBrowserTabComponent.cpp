@@ -5,7 +5,7 @@
 ProjectBrowserTabComponent::ProjectBrowserTabComponent() : TabbedComponent(TabbedButtonBar::TabsAtTop) {
 	ProjectEntryListComponent *pelc = new ProjectEntryListComponent();
 	LocalProjectEntryComponent *lpec = new LocalProjectEntryComponent();
-	pelc->addListEntry(*lpec);
+	pelc->addListEntry(lpec);
 	addTab("Remote projects", Colours::lightgrey, new ProjectEntryListComponent(), true);
 	addTab("Local projects", Colours::lightgrey, pelc, true);
 	addTab("Shared projects", Colours::lightgrey, new ProjectEntryListComponent(), true);

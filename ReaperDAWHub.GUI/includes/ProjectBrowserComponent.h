@@ -12,13 +12,11 @@ public:
 	ProjectBrowserComponent();
 	~ProjectBrowserComponent();
 	void resized() override;
-	void initData();
-
+	
 private:
 	GroupComponent g_group;
 	TextButton m_btn;
 	Label lbl_name;
 	Label lbl_version;
 	ProjectBrowserTabComponent m_tabs;
-	ProjectsController pc;
 };

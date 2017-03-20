@@ -8,7 +8,7 @@ It contains the basic startup code for a Juce application.
 ==============================================================================
 */
 
-
+#define WIN32_LEAN_AND_MEAN
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "../includes/GUIDemo.h"
 #include "../../ReaperDAWHub.GUI/includes/LoginWindow.h"
@@ -128,9 +128,7 @@ public:
 		you really have to override any DocumentWindow methods, make sure your
 		subclass also calls the superclass's method.
 		*/
-		void init() {
-			pc->initData();
-		}
+
 	private:
 		ProjectBrowserComponent *pc;
 		JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ProjectBrowserWindow)
