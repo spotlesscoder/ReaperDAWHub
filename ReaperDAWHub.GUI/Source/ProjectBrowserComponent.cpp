@@ -1,25 +1,18 @@
+#define BOOST_THREAD_PROVIDES_FUTURE
 #include "../includes/ProjectBrowserComponent.h"
 #include "../includes/ProjectEntryComponent.h"
-#define BOOST_THREAD_PROVIDES_FUTURE
-#include <iostream>
-#include <boost/asio.hpp>
-#include <boost/date_time/posix_time/posix_time.hpp>
-#include <future>
 #include <string>
-#include <iostream>
 #include <algorithm>
-#include <iostream>
 #include <map>
-#include <functional>
 
 template<typename R>
 bool isReady(std::future<R> const& f)
 {
+	Logger::writeToLog("check future");
 	return f.wait_for(std::chrono::seconds(-1)) == std::future_status::ready;
 }
 
 ProjectBrowserComponent::ProjectBrowserComponent() : m_btn("OK") {
-
 	addAndMakeVisible(m_tabs);
 	setSize(500, 600);
 	initData();
@@ -34,12 +27,23 @@ void ProjectBrowserComponent::resized() {
 }
 
 void ProjectBrowserComponent::initData() {
-	std::cout << "requesting projs";
-	std::future<std::vector<Project>> f = std::async(std::launch::async, &ProjectsController::getProjects, &pc);
-	std::cout << "requested projs";
-	std::vector<Project> projs;
-	if (isReady(f)) {
-		projs = f.get();
-		std::cout << "got projs";
+	Logger::writeToLog("requesting projects");
+	projectsFuture = std::async(std::launch::async, &ProjectsController::getProjects, &pc);
+	Logger::writeToLog("requested projects");
+	timer = new boost::asio::deadline_timer(io_service, boost::posix_time::seconds(interval_secs));
+	timer->async_wait(boost::bind(&ProjectBrowserComponent::fetchData, this, boost::asio::placeholders::error, timer));
+	ioSvcFuture = std::async(std::launch::async, static_cast<size_t(boost::asio::io_service::*)()>(&boost::asio::io_service::run), &io_service);
+}
+
+void ProjectBrowserComponent::fetchData(const boost::system::error_code& /*e*/,
+	boost::asio::deadline_timer* tmr) {
+	if (isReady(projectsFuture)) {
+		projects = projectsFuture.get();
+		Logger::writeToLog("got projs");
+	}
+	else {
+		tmr->expires_at(tmr->expires_at() + boost::posix_time::seconds(interval_secs));
+		// Posts the event
+		tmr->async_wait(boost::bind(&ProjectBrowserComponent::fetchData, this, boost::asio::placeholders::error, tmr));
 	}
 }
