@@ -13,6 +13,8 @@ It contains the basic startup code for a Juce application.
 #include "../includes/GUIDemo.h"
 #include "../../ReaperDAWHub.GUI/includes/LoginWindow.h"
 #include "../../ReaperDAWHub.GUI/includes/ProjectBrowserComponent.h"
+#include "../../ReaperDAWHub.GUI/includes/ProjectBrowserWindow.h"
+#include "../../ReaperDAWHub.GUI.Controller/includes/ProjectBrowserWindowController.h"
 
 
 //==============================================================================
@@ -34,6 +36,7 @@ public:
 
 		mainWindow = new MainWindow(getApplicationName());
 		projectBrowserWindow = new ProjectBrowserWindow(getApplicationName());
+		//ProjectBrowserWindowController *cnt = new ProjectBrowserWindowController(projectBrowserWindow);
 	}
 
 	void shutdown() override
@@ -98,41 +101,7 @@ public:
 		JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainWindow)
 	};
 
-	class ProjectBrowserWindow : public DocumentWindow
-	{
-	public:
-		ProjectBrowserWindow(String name) : DocumentWindow(name,
-			Colours::lightgrey,
-			DocumentWindow::allButtons)
-		{
-			setUsingNativeTitleBar(true);
-			pc = new ProjectBrowserComponent();
-			setContentOwned(pc, true);		
-
-
-			centreWithSize(getWidth(), getHeight());
-			setVisible(true);
-		}
-
-		void closeButtonPressed() override
-		{
-			// This is called when the user tries to close this window. Here, we'll just
-			// ask the app to quit when this happens, but you can change this to do
-			// whatever you need.
-			JUCEApplication::getInstance()->systemRequestedQuit();
-		}
-
-		/* Note: Be careful if you override any DocumentWindow methods - the base
-		class uses a lot of them, so by overriding you might break its functionality.
-		It's best to do all your work in your content component instead, but if
-		you really have to override any DocumentWindow methods, make sure your
-		subclass also calls the superclass's method.
-		*/
-
-	private:
-		ProjectBrowserComponent *pc;
-		JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ProjectBrowserWindow)
-	};
+	
 
 private:
 	ScopedPointer<MainWindow> mainWindow;

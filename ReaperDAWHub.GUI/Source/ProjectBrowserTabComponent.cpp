@@ -6,7 +6,8 @@ ProjectBrowserTabComponent::ProjectBrowserTabComponent() : TabbedComponent(Tabbe
 	ProjectEntryListComponent *pelc = new ProjectEntryListComponent();
 	LocalProjectEntryComponent *lpec = new LocalProjectEntryComponent();
 	pelc->addListEntry(lpec);
-	addTab("Remote projects", Colours::lightgrey, new ProjectEntryListComponent(), true);
+	ProjectEntryListComponent *pl1 = new ProjectEntryListComponent();
+	addTab("Remote projects", Colours::lightgrey, pl1 , true);
 	addTab("Local projects", Colours::lightgrey, pelc, true);
 	addTab("Shared projects", Colours::lightgrey, new ProjectEntryListComponent(), true);
 	setSize(getLocalBounds().getWidth(), getLocalBounds().getHeight());
@@ -14,7 +15,14 @@ ProjectBrowserTabComponent::ProjectBrowserTabComponent() : TabbedComponent(Tabbe
 	tbnc->notify();
 	tbnc->init(getTabbedButtonBar().getTabButton(2));
 	getTabbedButtonBar().getTabButton(2)->setExtraComponent(tbnc, TabBarButton::afterText);
+	pelcontroller = new ProjectEntryListController(pl1);
+
 }
 
 ProjectBrowserTabComponent::~ProjectBrowserTabComponent() {
+}
+
+void ProjectBrowserTabComponent::initProjects()
+{
+	pelcontroller->initProjects();
 }

@@ -12,7 +12,8 @@ public:
 	ProjectBrowserComponent();
 	~ProjectBrowserComponent();
 	void resized() override;
-	
+	void initProjects();
+
 private:
 	GroupComponent g_group;
 	TextButton m_btn;
