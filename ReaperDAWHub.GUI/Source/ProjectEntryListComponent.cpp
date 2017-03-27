@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-#include "../includes/ProjectEntryListComponent.h"
-#include "../includes/LocalProjectEntryComponent.h"
-
-ProjectEntryListComponent::ProjectEntryListComponent() {
-	setSize(500, 600);
-	addListEntry((*(new ProjectEntryComponent())));
-=======
 #define BOOST_THREAD_PROVIDES_FUTURE
 #include "../includes/ProjectEntryListComponent.h"
 #include "../includes/LocalProjectEntryComponent.h"
@@ -23,31 +15,30 @@ ProjectEntryListComponent::ProjectEntryListComponent() {
 	setSize(500, 600);
 	addListEntry((new ProjectEntryComponent()));
 	initData();
->>>>>>> parent of 0d78d6d... apply mvc pattern
 }
 
 ProjectEntryListComponent::~ProjectEntryListComponent() {
 
 }
 
-void ProjectEntryListComponent::addListEntry(ProjectEntryComponent &pec) {
+void ProjectEntryListComponent::addListEntry(ProjectEntryComponent *pec) {
 	addListEntryComponent(pec);
 }
 
-void ProjectEntryListComponent::addListEntry(LocalProjectEntryComponent &pec) {
+void ProjectEntryListComponent::addListEntry(LocalProjectEntryComponent *pec) {
 	addListEntryComponent(pec);
 }
 
-void ProjectEntryListComponent::addListEntryComponent(Component &pec) {
-	listEntries.push_back(&pec);
+void ProjectEntryListComponent::addListEntryComponent(Component *pec) {
+	listEntries.push_back(pec);
+	pec->setBounds(0, 60 * (listEntries.size() - 1), getLocalBounds().getWidth(), 60);
+	setSize(200, 150);
 	addAndMakeVisible(pec);
-	pec.setBounds(0, 60 * listEntries.size() - 1, getLocalBounds().getWidth(), 60);
+	repaint();
 }
 
 void ProjectEntryListComponent::resized() {
 
-<<<<<<< HEAD
-=======
 }
 
 void ProjectEntryListComponent::requestProjects()
@@ -73,9 +64,9 @@ void ProjectEntryListComponent::fetchData(const boost::system::error_code& /*e*/
 	boost::asio::deadline_timer* tmr) {
 	if (isReady(projectsFuture)) {
 		projects = projectsFuture.get();
-		for(auto project : projects)
+		for (auto project : projects)
 		{
-			ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project.getId()), "222");	
+			ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project.getId()), "222");
 			addListEntry(pec);
 		}
 		Logger::writeToLog("got projs");
@@ -84,5 +75,4 @@ void ProjectEntryListComponent::fetchData(const boost::system::error_code& /*e*/
 		tmr->expires_at(tmr->expires_at() + boost::posix_time::seconds(interval_secs));
 		tmr->async_wait(boost::bind(&ProjectEntryListComponent::fetchData, this, boost::asio::placeholders::error, tmr));
 	}
->>>>>>> parent of 0d78d6d... apply mvc pattern
 }

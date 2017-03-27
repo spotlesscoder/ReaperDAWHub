@@ -92,7 +92,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <PostBuildEvent>
-      <Command>cd $(TargetDir) &amp;&amp; $(TargetName).exe</Command>
+      <Command>"$(TargetPath)"</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>ReaperDAWHub.Controller.lib;%(AdditionalDependencies)</AdditionalDependencies>

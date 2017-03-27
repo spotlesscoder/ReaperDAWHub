@@ -98,7 +98,7 @@
       <AdditionalLibraryDirectories>C:\Program Files %28x86%29\REAPER\Plugins;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>cd $(TargetDir) &amp;&amp; $(TargetName).exe</Command>
+      <Command>"$(TargetPath)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

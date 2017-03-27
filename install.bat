@@ -1,0 +1,1 @@
+conan install -s arch=x86 -s build_type=Debug -s compiler="Visual Studio" -s compiler.version=14 -s compiler.runtime=MD
