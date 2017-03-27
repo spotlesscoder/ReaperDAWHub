@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D29AB73D-B8B2-4D6B-B804-39B01249BD58}</ProjectGuid>
-    <RootNamespace>ReaperDAWHubGUI</RootNamespace>
+    <ProjectGuid>{58477CDE-78FB-4D72-920B-2C2660D64B9F}</ProjectGuid>
+    <RootNamespace>ReaperDAWHubGUIController</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -38,13 +38,13 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -73,14 +73,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>C:\Program Files\REAPER (x64)\Plugins\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>C:\Program Files\REAPER (x64)\Plugins\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
@@ -91,21 +84,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader />
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)\ReaperDAWHub.GUI.lib</OutputFile>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -116,17 +101,11 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <PreprocessorDefinitions>BOOST_ALL_DYN_LINK;BOOST_ALL_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <Lib>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -135,7 +114,6 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -143,38 +121,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\ButtonListenerHandler.cpp" />
-    <ClCompile Include="Source\GUIConstants.cpp" />
-    <ClCompile Include="Source\LocalProjectEntryComponent.cpp" />
-    <ClCompile Include="Source\LoginWindow.cpp" />
-    <ClCompile Include="Source\LoginWindowComponent.cpp" />
-    <ClCompile Include="Source\ProjectBrowserComponent.cpp" />
-    <ClCompile Include="Source\ProjectBrowserTabComponent.cpp" />
-    <ClCompile Include="Source\ProjectBrowserWindow.cpp" />
-    <ClCompile Include="Source\ProjectEntryComponent.cpp" />
-    <ClCompile Include="Source\ProjectEntryListComponent.cpp" />
-    <ClCompile Include="Source\TabBarNotifyComponent.cpp" />
+    <ClInclude Include="includes\ProjectBrowserWindowController.h" />
+    <ClInclude Include="includes\ProjectEntryListController.h" />
+    <ClInclude Include="includes\ProjectsStrategy.h" />
+    <ClInclude Include="includes\RepeatedPollingProjectsStrategy.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\ButtonListenerHandler.h" />
-    <ClInclude Include="includes\Components.h" />
-    <ClInclude Include="includes\GlobalVars.h" />
-    <ClInclude Include="includes\GUIConstants.h" />
-    <ClInclude Include="includes\IProjectEntryComponent.h" />
-    <ClInclude Include="includes\LocalProjectEntryComponent.h" />
-    <ClInclude Include="includes\LoginWindow.h" />
-    <ClInclude Include="includes\LoginWindowComponent.h" />
-    <ClInclude Include="includes\ProjectBrowserComponent.h" />
-    <ClInclude Include="includes\ProjectBrowserTabComponent.h" />
-    <ClInclude Include="includes\ProjectBrowserWindow.h" />
-    <ClInclude Include="includes\ProjectEntryComponent.h" />
-    <ClInclude Include="includes\ProjectEntryListComponent.h" />
-    <ClInclude Include="includes\TabBarNotifyComponent.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReaperDAWHub.Controller\ReaperDAWHub.Controller.vcxproj">
-      <Project>{01056804-dcde-4092-9b76-346dd75c98e0}</Project>
-    </ProjectReference>
+    <ClCompile Include="Source\OneTimeGetProjectsStrategy.cpp" />
+    <ClCompile Include="Source\ProjectBrowserWindowController.cpp" />
+    <ClCompile Include="Source\ProjectEntryListController.cpp" />
+    <ClCompile Include="Source\RepeatedPollingProjectsStrategy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
