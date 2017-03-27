@@ -7,23 +7,11 @@
 #include "../includes/action_entry.h"
 #include "../ReaperDAWHub.GUI/includes/LoginWindow.h"
 #include "../includes/Main.h"
-#include "../ReaperDAWHub.GUI/includes/ProjectBrowserWindow.h"
-#include "../ReaperDAWHub.GUI/includes/LoginWindow.h"
 
 HINSTANCE g_hInst;
 HWND g_parent;
 
 std::vector<std::shared_ptr<action_entry>> g_actions;
-bool g_juce_inited;
-
-void initGUIifNeeded()
-{
-	if (g_juce_inited == false)
-	{
-		initialiseJuce_GUI();
-		g_juce_inited = true;
-	}
-}
 
 std::shared_ptr<action_entry> add_action(std::string name, std::string id, toggle_state togst, std::function<void(action_entry&)> f)
 {
@@ -41,6 +29,8 @@ bool hookCommandProc(int command, int flag) {
 	}
 	return false; // failed to run relevant action
 }
+
+bool g_juce_inited = false;
 
 class MyWebBrowserComponent : public WebBrowserComponent
 {
@@ -115,7 +105,7 @@ Window* g_browser_wnd = nullptr;
 
 void toggleBrowserWindow(action_entry&)
 {
-	initGUIifNeeded();
+	Window::initGUIifNeeded();
 	if (g_browser_wnd == nullptr)
 	{
 		g_browser_wnd = new Window("The Inter Webs", 700, 400, true, Colours::black);
@@ -134,71 +124,6 @@ void toggleBrowserWindow(action_entry&)
 }
 
 
-LoginWindow* g_login_wnd = nullptr;
-
-void toggleLoginWindow()
-{
-	initGUIifNeeded();
-	if (g_login_wnd == nullptr)
-	{
-		g_login_wnd = new LoginWindow("Login");
-		// This call order is important, the window should not be set visible
-		// before adding it into the Reaper window hierarchy
-		// Currently this only works for Windows, OS-X needs some really annoying special handling
-		// not implemented yet
-#ifdef WIN32
-		//if plugin info != NULL, this should indicate that window is loaded from Reaper.
-		//Otherwise, (e.g. from the GUIDemo project) GetMainHwnd() will point to 0x0000000 which leads to a crash
-		if (g_plugin_info != NULL) {
-
-			g_login_wnd->addToDesktop(g_login_wnd->getDesktopWindowStyleFlags(), GetMainHwnd());
-		}
-#else
-		w->addToDesktop(w->getDesktopWindowStyleFlags(), 0);
-		makeWindowFloatingPanel(w);
-#endif
-	}
-	g_login_wnd->setVisible(!g_login_wnd->isVisible());
-}
-
-
-void toggleLoginWindow(action_entry&)
-{
-	toggleLoginWindow();
-}
-
-
-ProjectBrowserWindow* g_projbrowser_wnd = nullptr;
-
-void toggleProjectBrowserWindow()
-{
-	initGUIifNeeded();
-	if (g_projbrowser_wnd == nullptr)
-	{
-		g_projbrowser_wnd = new ProjectBrowserWindow("Test");
-		// This call order is important, the window should not be set visible
-		// before adding it into the Reaper window hierarchy
-		// Currently this only works for Windows, OS-X needs some really annoying special handling
-		// not implemented yet
-#ifdef WIN32
-		//if plugin info != NULL, this should indicate that window is loaded from Reaper.
-		//Otherwise, (e.g. from the GUIDemo project) GetMainHwnd() will point to 0x0000000 which leads to a crash
-		if (g_plugin_info != NULL) {
-			g_projbrowser_wnd->addToDesktop(g_projbrowser_wnd->getDesktopWindowStyleFlags(), GetMainHwnd());
-		}
-#else
-		w->addToDesktop(w->getDesktopWindowStyleFlags(), 0);
-		makeWindowFloatingPanel(w);
-#endif
-	}
-	g_projbrowser_wnd->setVisible(!g_projbrowser_wnd->isVisible());
-}
-
-
-void toggleProjectBrowserWindow(action_entry&)
-{
-	toggleProjectBrowserWindow();
-}
 
 extern "C"
 {

@@ -28,8 +28,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.ControllerTest
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Playground", "ReaperDAWHub.Playground\ReaperDAWHub.Playground.vcxproj", "{7C524033-B374-4E72-BE33-6D33AE510AF1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.GUI.Controller", "ReaperDAWHub.GUI.Controller\ReaperDAWHub.GUI.Controller.vcxproj", "{58477CDE-78FB-4D72-920B-2C2660D64B9F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -141,14 +139,6 @@ Global
 		{7C524033-B374-4E72-BE33-6D33AE510AF1}.Release|Win32.Build.0 = Release|Win32
 		{7C524033-B374-4E72-BE33-6D33AE510AF1}.Release|x64.ActiveCfg = Release|x64
 		{7C524033-B374-4E72-BE33-6D33AE510AF1}.Release|x64.Build.0 = Release|x64
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Debug|Win32.Build.0 = Debug|Win32
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Debug|x64.ActiveCfg = Debug|x64
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Debug|x64.Build.0 = Debug|x64
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Release|Win32.ActiveCfg = Release|Win32
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Release|Win32.Build.0 = Release|Win32
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Release|x64.ActiveCfg = Release|x64
-		{58477CDE-78FB-4D72-920B-2C2660D64B9F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
