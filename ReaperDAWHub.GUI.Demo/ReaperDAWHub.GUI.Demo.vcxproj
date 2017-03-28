@@ -91,7 +91,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>JUCE_FORCE_DEBUG=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\ReaperDAWHub.GUI.Demo.exe</OutputFile>
@@ -3789,6 +3789,11 @@
     <ClInclude Include="includes\MainComponent.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ReaperDAWHub.GUI\ReaperDAWHub.GUI.vcxproj">
+      <Project>{d29ab73d-b8b2-4d6b-b804-39b01249bd58}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="..\JuceLibraryCode\modules\juce_audio_formats\codecs\flac\Flac Licence.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -3802,11 +3807,6 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReaperDAWHub.GUI\ReaperDAWHub.GUI.vcxproj">
-      <Project>{d29ab73d-b8b2-4d6b-b804-39b01249bd58}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
