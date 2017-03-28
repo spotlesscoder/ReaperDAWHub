@@ -17,11 +17,20 @@ ProjectEntryComponent::~ProjectEntryComponent() {
 }
 
 ProjectEntryComponent::ProjectEntryComponent(std::string name, std::string version) {
+	lbl_name.setText(name, dontSendNotification);
+	lbl_version.setText(version, dontSendNotification);
+	lbl_date.setText("Mon, 2017-02-20 18:56", dontSendNotification);
+
+	addAndMakeVisibleWithListener(lbl_name);
+	addAndMakeVisibleWithListener(lbl_version);
+	addAndMakeVisibleWithListener(lbl_date);
+
+	setSize(200, 50);
 }
 
 void ProjectEntryComponent::resized() {
-	lbl_name.setBounds(0, 0, getWidth(), cntrl_height);
-	lbl_version.setBounds(0, cntrl_height + cntrl_height, getWidth(), cntrl_height);
+	lbl_name.setBounds(2, 0, getWidth(), cntrl_height);
+	lbl_version.setBounds(2, cntrl_height + cntrl_height, getWidth(), cntrl_height);
 	lbl_date.setBounds(getWidth() - 125, cntrl_height + cntrl_height, getWidth(), cntrl_height);
 
 	Font f_name = lbl_name.getFont();

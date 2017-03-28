@@ -7,7 +7,7 @@ It contains the basic startup code for a Juce application.
 
 ==============================================================================
 */
-
+#define JUCE_DEBUG 0
 #define WIN32_LEAN_AND_MEAN
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "../includes/GUIDemo.h"
@@ -129,7 +129,6 @@ public:
 		subclass also calls the superclass's method.
 		*/
 		void init() {
-			pc->initData();
 		}
 	private:
 		ProjectBrowserComponent *pc;

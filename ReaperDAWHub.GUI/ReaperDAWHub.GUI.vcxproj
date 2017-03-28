@@ -74,16 +74,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
-    <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>C:\Program Files\REAPER (x64)\Plugins\</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>C:\Program Files\REAPER (x64)\Plugins\</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>C:\Program Files (x86)\Reaper\Plugins\</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -91,11 +91,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\JuceLibraryCode;..\JuceLibraryCode\modules;.\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>JUCE_FORCE_DEBUG=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)\ReaperDAWHub.GUI.lib</OutputFile>
+      <AdditionalDependencies>ReaperDAWHub.GUI.Controller.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -165,6 +167,9 @@
   <ItemGroup>
     <ProjectReference Include="..\ReaperDAWHub.Controller\ReaperDAWHub.Controller.vcxproj">
       <Project>{01056804-dcde-4092-9b76-346dd75c98e0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaperDAWHub.GUI.Controller\ReaperDAWHub.GUI.Controller.vcxproj">
+      <Project>{f5019979-94e6-42cc-97b5-355b1f28778b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
