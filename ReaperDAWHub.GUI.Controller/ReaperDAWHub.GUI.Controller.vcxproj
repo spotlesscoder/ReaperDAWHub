@@ -130,10 +130,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="includes\OneTimeGetProjectsStrategy.h" />
     <ClInclude Include="includes\ProjectEntryListController.h" />
+    <ClInclude Include="includes\ProjectsStrategy.h" />
+    <ClInclude Include="includes\RepeatedPollingProjectsStrategy.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\OneTimeGetProjectsStrategy.cpp" />
     <ClCompile Include="Source\ProjectEntryListController.cpp" />
+    <ClCompile Include="Source\RepeatedPollingProjectsStrategy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReaperDAWHub.Controller\ReaperDAWHub.Controller.vcxproj">
