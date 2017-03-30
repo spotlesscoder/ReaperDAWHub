@@ -9,7 +9,7 @@
 class RepeatedPollingProjectsStrategy : public ProjectsStrategy
 {
 public:
-	RepeatedPollingProjectsStrategy(ProjectEntryListController* owningController);
+	RepeatedPollingProjectsStrategy(ProjectEntryListController* owningController, int intervalSeconds);
 	~RepeatedPollingProjectsStrategy();
 	void initData() override;
 	void cancelPendingActions() override;

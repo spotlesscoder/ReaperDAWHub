@@ -38,6 +38,7 @@ void OneTimeGetProjectsStrategy::initData() {
 
 void OneTimeGetProjectsStrategy::cancelPendingActions()
 {
+	timer->cancel();
 }
 
 void OneTimeGetProjectsStrategy::fetchData(const boost::system::error_code& /*e*/,

@@ -8,13 +8,13 @@ public:
 	LoginWindowComponent();
 	~LoginWindowComponent();
     void resized() override;
-
+	void cancelPendingActions();
 
 private:
-	TextEditor m_user_name;
-	TextEditor m_password;
-	TextButton m_btn;
-	Label m_lbl_user_name;
-	Label m_lbl_password;
+	ScopedPointer<TextEditor> m_user_name;
+	ScopedPointer<TextEditor> m_password;
+	ScopedPointer<TextButton> m_btn;
+	ScopedPointer<Label> m_lbl_user_name;
+	ScopedPointer<Label> m_lbl_password;
 
 };

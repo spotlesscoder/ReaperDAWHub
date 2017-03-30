@@ -22,7 +22,7 @@ void ProjectEntryListComponent::addListEntry(LocalProjectEntryComponent *pec) {
 void ProjectEntryListComponent::addListEntryComponent(Component *pec) {
 	listEntries.push_back(pec);
 	pec->setBounds(0, 60 * (listEntries.size() - 1), getLocalBounds().getWidth(), 60);
-	setSize(200, 150);
+	setSize(500, 60 * (listEntries.size() - 1));
 	addAndMakeVisible(pec);
 	repaint();
 }
