@@ -17,6 +17,4 @@ private:
 	LocalProjectEntryComponent m_entry2;
 	ProjectEntryListController *pelcont;
 	ProjectEntryListController *pelccont2;
-	Viewport viewport_local_proj;
-	Viewport viewport_remote_proj;
 };

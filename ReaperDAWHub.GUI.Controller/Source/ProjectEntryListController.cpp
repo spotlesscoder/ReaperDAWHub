@@ -5,19 +5,15 @@
 
 void ProjectEntryListController::processProject( Project *project)
 {
-	ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project->getId()), project->getVersion());
+	ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project->getId()), "222");
 	m_comp->addListEntry(pec);
 	m_comp->repaint();
 }
 
 void ProjectEntryListController::initedData()
 {
-	Logger::writeToLog("inited data");
 	strategy->cancelPendingActions();
-	Logger::writeToLog("cancelled pending actions");
-	strategy = new RepeatedPollingProjectsStrategy(this, 1);
-	Logger::writeToLog("new strategy: polling");
-	strategy->initData();
+	strategy = new RepeatedPollingProjectsStrategy(this);
 }
 
 ProjectEntryListController::ProjectEntryListController(ProjectEntryListComponent *comp) {

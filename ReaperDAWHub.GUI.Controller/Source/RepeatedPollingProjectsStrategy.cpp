@@ -23,9 +23,8 @@ void RepeatedPollingProjectsStrategy::backgroundCheckFuture()
 	ioSvcFuture = std::async(std::launch::async, static_cast<size_t(boost::asio::io_service::*)()>(&boost::asio::io_service::run), &io_service);
 }
 
-RepeatedPollingProjectsStrategy::RepeatedPollingProjectsStrategy(ProjectEntryListController* owningController, int intervalSeconds)
+RepeatedPollingProjectsStrategy::RepeatedPollingProjectsStrategy(ProjectEntryListController* owningController)
 {
-	this->interval_secs = intervalSeconds;
 	this->owningController = owningController;
 }
 
