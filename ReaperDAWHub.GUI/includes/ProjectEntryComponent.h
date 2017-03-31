@@ -12,11 +12,11 @@ public:
 	void mouseEnter(const MouseEvent &) override;
 
 private:
-	Label lbl_name;
-	Label lbl_version;
-	Label lbl_date;
+	ScopedPointer<Label> lbl_name;
+	ScopedPointer<Label> lbl_version;
+	ScopedPointer<Label> lbl_date;
 	Colour bgColour = Colours::lightgrey;
 	
 	void mouseExit(const MouseEvent &);
-	void addAndMakeVisibleWithListener(Component &child);
+	void addAndMakeVisibleWithListener(Component *child);
 };

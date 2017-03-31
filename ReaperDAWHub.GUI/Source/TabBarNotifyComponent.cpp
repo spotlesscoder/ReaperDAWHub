@@ -1,12 +1,14 @@
 #include "../includes/TabBarNotifyComponent.h"
+#include <string>
 
 TabBarNotifyComponent::TabBarNotifyComponent()
 {
+	lblNumNotifications = new Label;
 	addChildComponent(lblNumNotifications);
-	Font f = lblNumNotifications.getFont();
+	Font f = lblNumNotifications.get()->getFont();
 	f.setBold(true);
-	lblNumNotifications.setColour(Label::textColourId, Colours::white);
-	lblNumNotifications.setFont(f);
+	lblNumNotifications.get()->setColour(Label::textColourId, Colours::white);
+	lblNumNotifications.get()->setFont(f);
 }
 
 void TabBarNotifyComponent::init(TabBarButton *parentComponent) {
@@ -25,24 +27,24 @@ void TabBarNotifyComponent::notify() {
 	notificationCounter++;
 	if (notificationCounter > 0) {
 		if (notificationCounter < 10) {
-			lblNumNotifications.setText(std::to_string(notificationCounter), dontSendNotification);
+			lblNumNotifications.get()->setText(std::to_string(notificationCounter), dontSendNotification);
 		}
 		else {
-			lblNumNotifications.setText(std::to_string(notificationCounter) + " +", dontSendNotification);
+			lblNumNotifications.get()->setText(std::to_string(notificationCounter) + " +", dontSendNotification);
 		}
-		lblNumNotifications.setVisible(true);
+		lblNumNotifications.get()->setVisible(true);
 		setVisible(true);
 	}
 	if (notificationCounter > 0) {
 		setSize(18, 20);
-		lblNumNotifications.setBounds(-2, 4, 20, 20);
-		lblNumNotifications.setVisible(true);
+		lblNumNotifications.get()->setBounds(-2, 4, 20, 20);
+		lblNumNotifications.get()->setVisible(true);
 	}
 }
 
 void TabBarNotifyComponent::clearNotifications() {
 	notificationCounter = 0;
 	setVisible(false);
-	lblNumNotifications.setVisible(false);
+	lblNumNotifications.get()->setVisible(false);
 }
 

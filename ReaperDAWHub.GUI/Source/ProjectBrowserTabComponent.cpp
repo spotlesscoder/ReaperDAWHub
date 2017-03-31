@@ -1,8 +1,7 @@
 #include "../includes/ProjectBrowserTabComponent.h"
-#include "../includes/LocalProjectEntryComponent.h"
 #include "../includes/TabBarNotifyComponent.h"
 
-void ProjectBrowserTabComponent::initTabBarNotifyComponent()
+void ProjectBrowserTabComponent::initTabBarNotifyComponent() const
 {
 	TabBarNotifyComponent *tbnc = new TabBarNotifyComponent();
 	tbnc->notify();
@@ -10,9 +9,9 @@ void ProjectBrowserTabComponent::initTabBarNotifyComponent()
 	getTabbedButtonBar().getTabButton(2)->setExtraComponent(tbnc, TabBarButton::afterText);
 }
 
-void ProjectBrowserTabComponent::initViewport(Viewport *viewport, ProjectEntryListComponent *component)
+void ProjectBrowserTabComponent::initViewport(Viewport *viewport, ProjectEntryListComponent *component) const
 {
-	viewport->setSize(100, 200);
+	viewport->setSize(500, 200);
 	viewport->setViewedComponent(component, false);
 	viewport->setScrollBarsShown(true, false);
 }

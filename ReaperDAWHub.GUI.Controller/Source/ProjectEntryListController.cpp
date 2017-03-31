@@ -13,7 +13,8 @@ void ProjectEntryListController::processProject( Project *project)
 void ProjectEntryListController::initedData()
 {
 	strategy->cancelPendingActions();
-	strategy = new RepeatedPollingProjectsStrategy(this);
+	strategy = new RepeatedPollingProjectsStrategy(this, 10);
+	strategy->initData();
 }
 
 ProjectEntryListController::ProjectEntryListController(ScopedPointer<ProjectEntryListComponent> comp) {

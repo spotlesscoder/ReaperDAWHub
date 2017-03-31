@@ -8,6 +8,16 @@ long Project::getId() {
 	return id;
 }
 
+void Project::setVersion(std::string version)
+{
+	this->version = version;
+}
+
+std::string Project::getVersion()
+{
+	return version;
+}
+
 std::string Project::getName()
 {
 	return name;

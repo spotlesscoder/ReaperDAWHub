@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../../JuceLibraryCode/JuceHeader.h"
-#include <string>
 
 class TabBarNotifyComponent : public Component
 {
@@ -14,6 +13,6 @@ class TabBarNotifyComponent : public Component
 
 	private:
 		uint8_t notificationCounter = 0;
-		Label lblNumNotifications;
+		ScopedPointer<Label> lblNumNotifications;
 		Colour notificationBubbleColour = Colours::red;
 };

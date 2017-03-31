@@ -2,18 +2,18 @@
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "../../ReaperDAWHub.GUI.Controller/includes/ProjectEntryListController.h"
 #include "ProjectEntryListComponent.h"
-#include "LocalProjectEntryComponent.h"
 
 class ProjectBrowserTabComponent : public TabbedComponent
 {
 public:
-	void initTabBarNotifyComponent();
-	void initViewport(Viewport *viewport, ProjectEntryListComponent *component);
-	void initComponents();
 	ProjectBrowserTabComponent();
 	~ProjectBrowserTabComponent();
 
 private:
+	void initTabBarNotifyComponent() const;
+	void initViewport(Viewport *viewport, ProjectEntryListComponent *component) const;
+	void initComponents();
+
 	ScopedPointer<ProjectEntryListComponent> m_local_proj = new ProjectEntryListComponent();
 	ScopedPointer<ProjectEntryListComponent> m_remote_proj = new ProjectEntryListComponent();
 	ScopedPointer<ProjectEntryListComponent> m_shared_proj = new ProjectEntryListComponent();
