@@ -6,8 +6,8 @@
 void ProjectEntryListController::processProject( Project *project)
 {
 	ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project->getId()), "222");
-	m_comp->addListEntry(pec);
-	m_comp->repaint();
+	m_comp.get()->addListEntry(pec);
+	m_comp.get()->repaint();
 }
 
 void ProjectEntryListController::initedData()
@@ -16,7 +16,7 @@ void ProjectEntryListController::initedData()
 	strategy = new RepeatedPollingProjectsStrategy(this);
 }
 
-ProjectEntryListController::ProjectEntryListController(ProjectEntryListComponent *comp) {
+ProjectEntryListController::ProjectEntryListController(ScopedPointer<ProjectEntryListComponent> comp) {
 	m_comp = comp;
 	strategy = new OneTimeGetProjectsStrategy(this);
 	strategy->initData();

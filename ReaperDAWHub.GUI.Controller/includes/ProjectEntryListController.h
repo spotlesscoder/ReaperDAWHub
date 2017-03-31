@@ -4,11 +4,11 @@
 
 class ProjectEntryListController {
 public:
-	ProjectEntryListController(ProjectEntryListComponent *comp);
+	ProjectEntryListController(ScopedPointer<ProjectEntryListComponent> comp);
 	void processProject(Project *project);
 	void initedData();
 private:
 	ProjectsStrategy *strategy;
-	ProjectEntryListComponent *m_comp;
+	ScopedPointer<ProjectEntryListComponent> m_comp;
 
 };
