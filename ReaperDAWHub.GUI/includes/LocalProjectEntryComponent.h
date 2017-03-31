@@ -1,5 +1,5 @@
 #pragma once
-#include "../JuceLibraryCode/JuceHeader.h";
+#include "../JuceLibraryCode/JuceHeader.h"
 
 /*
 UI component to display projects stored locally. 
