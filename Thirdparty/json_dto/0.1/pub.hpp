@@ -13,7 +13,7 @@
 #include <memory>
 #include <limits>
 #include <type_traits>
-
+#include <string>
 #include <rapidjson/document.h>
 #include <rapidjson/error/error.h>
 #include <rapidjson/error/en.h>

@@ -21,10 +21,10 @@
     <ClInclude Include="includes\Project.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="includes\Entity.h">
+    <ClInclude Include="includes\Entities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="includes\Entities.h">
+    <ClInclude Include="includes\Entity.h\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

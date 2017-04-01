@@ -5,6 +5,7 @@
 #include "../ReaperDAWHub.Controller/includes/ProjectsController.h"
 #include <iostream>
 #include <future>
+#include "../ReaperDAWHub.Service.Client.Serialization.JSONImpl/includes/JSONSerializer.h"
 
 template<typename R>
 bool isReady(std::future<R> const& f)
@@ -29,6 +30,8 @@ int main()
 		std::cout << "got projs\n";
 	}
 	
+	std::cout << JSONSerializer<Project>::serialize(projs[0]);
+
     return 0;
 }
 

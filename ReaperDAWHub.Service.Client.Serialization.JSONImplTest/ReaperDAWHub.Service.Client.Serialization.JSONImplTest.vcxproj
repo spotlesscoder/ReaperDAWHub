@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includes\JSONDeserializerTest.h" />
+    <ClInclude Include="includes\JSONSerializerTest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\JSONDeserializerTest.cpp" />
+    <ClCompile Include="Source\JSONSerializerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReaperDAWHub.Service.Client.Serialization.JSONImpl\ReaperDAWHub.Service.Client.Serialization.JSONImpl.vcxproj">

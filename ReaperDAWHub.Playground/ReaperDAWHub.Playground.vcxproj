@@ -173,6 +173,9 @@
     <ProjectReference Include="..\ReaperDAWHub.Controller\ReaperDAWHub.Controller.vcxproj">
       <Project>{01056804-dcde-4092-9b76-346dd75c98e0}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\ReaperDAWHub.Service.Client.Serialization.JSONImpl\ReaperDAWHub.Service.Client.Serialization.JSONImpl.vcxproj">
+      <Project>{c6d79bdd-29b8-4377-8803-4d47275eb7bb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

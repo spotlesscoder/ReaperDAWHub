@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Entity.h"
 #include <string>
+#include "Entity.h/Entity.h"
 
 struct Project : Entity {
 	std::string name;
-	long ownerId;
+	std::int64_t ownerId;
 	std::string version;
-	long timeStampLastModified;
-	long timeStampCreated;
+	std::int64_t timeStampLastModified;
+	std::int64_t timeStampCreated;
 };
