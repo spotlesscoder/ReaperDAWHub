@@ -8,7 +8,7 @@ class ProjectsController {
 public:
 	ProjectsController();
 	std::vector<Project> getProjects();
-	std::vector<Project> getProjectsChangedSince(std::chrono::time_point<std::chrono::system_clock> since);
+	std::vector<Project> getProjectsChangedSince(long timestampSince);
 
 private:
 	IServiceClientAPI* serviceClient;

@@ -95,8 +95,8 @@
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\ReaperDAWHub.Service.Client.RESTImplTest.exe</OutputFile>
-      <AdditionalDependencies>ReaperDAWHub.Model.lib;ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.API.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\REAPER\Plugins;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.API.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>"$(TargetPath)"</Command>
@@ -139,9 +139,6 @@
     <ClCompile Include="Source\RESTClientTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReaperDAWHub.Model\ReaperDAWHub.Model.vcxproj">
-      <Project>{bfe23995-599b-4a4c-b1b8-24d522114c29}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\ReaperDAWHub.Service.Client.API\ReaperDAWHub.Service.Client.API.vcxproj">
       <Project>{3ec2c1b8-975e-4ba0-8c9a-5c122d768188}</Project>
     </ProjectReference>

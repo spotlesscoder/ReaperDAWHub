@@ -47,7 +47,7 @@ void OneTimeGetProjectsStrategy::fetchData(const boost::system::error_code& /*e*
 		for (auto project : projects)
 		{
 			//TODO use observer pattern
-			owningController->processProject(&project);
+			owningController->processProject(project);
 		}
 		Logger::writeToLog("got projs");
 		owningController->initedData();

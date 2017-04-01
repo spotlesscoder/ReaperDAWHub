@@ -49,7 +49,7 @@ void RepeatedPollingProjectsStrategy::fetchData(const boost::system::error_code&
 		for (auto project : projects)
 		{
 			//TODO use observer pattern
-			owningController->processProject(&project);
+			owningController->processProject(project);
 		}
 		Logger::writeToLog("got projs");
 		owningController->initedData();

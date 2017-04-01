@@ -24,11 +24,6 @@
   <ItemGroup>
     <ClCompile Include="includes\RESTClient.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReaperDAWHub.Model\ReaperDAWHub.Model.vcxproj">
-      <Project>{bfe23995-599b-4a4c-b1b8-24d522114c29}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A2B523C8-9A29-4589-983E-9935C0FB81D1}</ProjectGuid>
     <RootNamespace>ReaperDAWHubServiceClientRESTImpl</RootNamespace>

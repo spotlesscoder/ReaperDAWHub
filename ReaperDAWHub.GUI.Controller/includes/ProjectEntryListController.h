@@ -5,7 +5,7 @@
 class ProjectEntryListController {
 public:
 	ProjectEntryListController(ScopedPointer<ProjectEntryListComponent> comp);
-	void processProject(Project *project);
+	void processProject(Project project) const;
 	void initedData();
 private:
 	ProjectsStrategy *strategy;

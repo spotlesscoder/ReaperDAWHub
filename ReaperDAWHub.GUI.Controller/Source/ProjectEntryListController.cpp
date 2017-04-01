@@ -3,9 +3,9 @@
 #include "OneTimeGetProjectsStrategy.h"
 #include "RepeatedPollingProjectsStrategy.h"
 
-void ProjectEntryListController::processProject( Project *project)
+void ProjectEntryListController::processProject(Project project) const
 {
-	ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project->getId()), "222");
+	ProjectEntryComponent *pec = new ProjectEntryComponent(std::to_string(project.id), "222");
 	m_comp.get()->addListEntry(pec);
 	m_comp.get()->repaint();
 }

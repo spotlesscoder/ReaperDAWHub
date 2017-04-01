@@ -28,9 +28,6 @@
     <ClCompile Include="Source\JSONSerializer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReaperDAWHub.Model\ReaperDAWHub.Model.vcxproj">
-      <Project>{bfe23995-599b-4a4c-b1b8-24d522114c29}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\ReaperDAWHub.Service.Client.Serialization.API\ReaperDAWHub.Service.Client.Serialization.API.vcxproj">
       <Project>{295b8458-68e1-4c0d-aaa3-dfac24fae6e3}</Project>
     </ProjectReference>

@@ -11,7 +11,7 @@ TEST_CASE("Deserialize project JSON") {
 	RestClient* rc = new RestClient();
 	std::vector<Project> result = rc->getAvailableProjects();
 	Project p1 = result.back();
-	REQUIRE(1234 == p1.getId());
-	REQUIRE(33 == p1.getOwnerId());
-	REQUIRE("1234" == p1.getName());
+	REQUIRE(1234 == p1.id);
+	REQUIRE(33 == p1.ownerId);
+	REQUIRE("1234" == p1.name);
 }

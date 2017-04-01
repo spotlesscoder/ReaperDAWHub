@@ -144,9 +144,6 @@
     <ProjectReference Include="..\ReaperDAWHub.Controller\ReaperDAWHub.Controller.vcxproj">
       <Project>{01056804-dcde-4092-9b76-346dd75c98e0}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\ReaperDAWHub.Model\ReaperDAWHub.Model.vcxproj">
-      <Project>{bfe23995-599b-4a4c-b1b8-24d522114c29}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

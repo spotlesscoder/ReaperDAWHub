@@ -28,7 +28,7 @@ std::vector<Project> ProjectsController::getProjects() {
 	return result;
 }
 
-std::vector<Project> ProjectsController::getProjectsChangedSince(std::chrono::time_point<std::chrono::system_clock> since) {
+std::vector<Project> ProjectsController::getProjectsChangedSince(long timestampSince) {
 	std::vector<Project> result;
 	if (serviceClient != nullptr) {
 		try

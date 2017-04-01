@@ -7,6 +7,6 @@ class RestClient : public IServiceClientAPI {
 public:
 	RestClient();
 	std::vector<Project> getAvailableProjects();
-	std::vector<Project> getProjectsChangedSince(std::chrono::time_point<std::chrono::system_clock> since);
+	std::vector<Project> getProjectsChangedSince(long timestampSince);
 	void uploadProject(Project project);
 };
