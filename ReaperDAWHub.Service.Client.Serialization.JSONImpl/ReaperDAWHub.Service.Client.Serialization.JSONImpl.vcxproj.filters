@@ -13,6 +13,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Thirdparty">
+      <UniqueIdentifier>{7e1b1d53-77d1-45f4-94ea-a47d0c782b62}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes\JSONDeserializer.h">
@@ -20,6 +23,9 @@
     </ClInclude>
     <ClInclude Include="includes\JSONSerializer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Thirdparty\json_dto\0.1\pub.hpp">
+      <Filter>Thirdparty</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

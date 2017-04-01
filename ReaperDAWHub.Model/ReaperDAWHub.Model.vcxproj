@@ -122,14 +122,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Entity.cpp" />
-    <ClCompile Include="Source\Project.cpp" />
-    <ClCompile Include="Source\User.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="includes\Entities.h" />
     <ClInclude Include="includes\Entity.h" />
-    <ClInclude Include="includes\IEntity.h" />
     <ClInclude Include="includes\Project.h" />
     <ClInclude Include="includes\User.h" />
   </ItemGroup>

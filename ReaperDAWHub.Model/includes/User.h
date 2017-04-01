@@ -3,9 +3,6 @@
 #include <string>
 #include <chrono>
 
-class User  {
-
-public:
-
+struct User  {
 
 };
