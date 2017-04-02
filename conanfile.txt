@@ -2,6 +2,7 @@
 rapidjson/1.1.0@lasote/vcpkg
 Catch/1.7.2@gasuketsu/testing
 Boost/1.63.0/windoze/stable
+cpprestsdk/2.8.0@lasote/vcpkg
 
 [options]
 

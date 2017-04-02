@@ -1,5 +1,14 @@
 #include "../includes/RESTClient.h"
 #include "../../ReaperDAWHub.Model/includes/Project.h"
+#include "../../ReaperDAWHub.Service.Client.Serialization.JSONImpl/includes/JSONSerializer.h"
+#include <cpprest/http_client.h>
+#include <cpprest/filestream.h>
+
+using namespace utility;                    // Common utilities like string conversions
+using namespace web;                        // Common features like URIs.
+using namespace web::http;                  // Common HTTP functionality
+using namespace web::http::client;          // HTTP client features
+using namespace concurrency::streams;       // Asynchronous streams
 
 std::vector<Project> RestClient::getAvailableProjects() {
 	std::vector<Project> result;
@@ -26,9 +35,15 @@ std::vector<Project> RestClient::getProjectsChangedSince(long timestampSince) {
 }
 
 void RestClient::uploadProject(Project project) {
-	return;
+	sendData(JSONSerializer<Project>::serialize(project));
+}
+
+void RestClient::sendData(std::string body)
+{
+	
 }
 
 RestClient::RestClient() {
 
 }
+

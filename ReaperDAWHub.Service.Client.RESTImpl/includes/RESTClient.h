@@ -9,4 +9,7 @@ public:
 	std::vector<Project> getAvailableProjects();
 	std::vector<Project> getProjectsChangedSince(long timestampSince);
 	void uploadProject(Project project);
+
+private:
+	void sendData(std::string body);
 };

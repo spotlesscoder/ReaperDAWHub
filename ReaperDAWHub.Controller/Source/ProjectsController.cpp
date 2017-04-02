@@ -15,7 +15,7 @@ std::vector<Project> ProjectsController::getProjects() {
 	if(serviceClient != nullptr) {
 		try
 		{
-			std::this_thread::sleep_for(std::chrono::seconds(3));
+			std::this_thread::sleep_for(std::chrono::microseconds(300));
 			std::cout << "controller requested projs\n";
 			result = serviceClient->getAvailableProjects();
 		}

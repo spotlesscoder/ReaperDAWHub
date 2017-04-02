@@ -28,7 +28,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -96,7 +96,7 @@
       <Command>"$(TargetPath)"</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>ReaperDAWHub.Controller.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ReaperDAWHub.Controller.lib;ReaperDAWHub.Service.Client.Serialization.JSONImpl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)\ReaperDAWHub.ControllerTest.exe</OutputFile>
       <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>

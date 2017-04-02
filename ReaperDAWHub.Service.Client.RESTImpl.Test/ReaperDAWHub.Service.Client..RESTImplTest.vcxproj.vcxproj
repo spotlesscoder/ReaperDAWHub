@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -95,7 +95,7 @@
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\ReaperDAWHub.Service.Client.RESTImplTest.exe</OutputFile>
-      <AdditionalDependencies>ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.API.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.API.lib;ReaperDAWHub.Service.Client.Serialization.JSONImpl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
