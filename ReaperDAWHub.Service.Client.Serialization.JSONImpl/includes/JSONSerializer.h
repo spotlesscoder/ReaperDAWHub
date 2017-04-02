@@ -7,6 +7,7 @@
 template <class IEntity> class JSONSerializer
 {
 public:
+	static Project deserialize(std::string projectString);
 	static std::string serialize(Project entity);
 	static std::string serialize(User entity);
 };

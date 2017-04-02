@@ -1,7 +1,4 @@
-#include "rapidjson/document.h"
 #include "rapidjson/writer.h"
-#include "rapidjson/stringbuffer.h"
-#include <iostream>
 #include "../../Thirdparty/json_dto/0.1/pub.hpp"
 #include "../includes/JSONSerializer.h"
 #include "../../ReaperDAWHub.Model/includes/Project.h"
@@ -39,7 +36,10 @@ namespace json_dto
 
 string JSONSerializer<Project>::serialize(Project project) {
 	return json_dto::to_json(project);
+}
 
+Project JSONSerializer<Project>::deserialize(std::string projectString) {
+	return json_dto::from_json<Project>(projectString);
 }
 
 string JSONSerializer<User>::serialize(User user) {

@@ -12,4 +12,5 @@ public:
 
 private:
 	void sendData(std::string body);
+	std::string getProjects();
 };

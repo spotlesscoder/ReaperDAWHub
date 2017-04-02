@@ -22,7 +22,7 @@ int main()
 	std::future<std::vector<Project>> f = std::async(std::launch::async, &ProjectsController::getProjects, &pc);
 	std::cout << "requested projs\n";
 	for (int i = 0; i < 10; i++) {
-		std::this_thread::sleep_for(std::chrono::microseconds(100));
+		std::this_thread::sleep_for(std::chrono::microseconds(1000));
 		std::cout << i << "\n";
 	}
 
