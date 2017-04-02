@@ -73,7 +73,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>C:\Program Files %28x86%29\REAPER\Plugins;..\Debug;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(TargetDir);$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -96,6 +96,7 @@
     <Link>
       <OutputFile>$(OutDir)\ReaperDAWHub.GUI.Demo.exe</OutputFile>
       <AdditionalDependencies>ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.Serialization.JSONImpl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -3792,6 +3793,9 @@
   <ItemGroup>
     <ProjectReference Include="..\ReaperDAWHub.GUI\ReaperDAWHub.GUI.vcxproj">
       <Project>{d29ab73d-b8b2-4d6b-b804-39b01249bd58}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaperDAWHub.Service.Client.RESTImpl\ReaperDAWHub.Service.Client.RESTImpl.vcxproj.vcxproj">
+      <Project>{a2b523c8-9a29-4589-983e-9935c0fb81d1}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
