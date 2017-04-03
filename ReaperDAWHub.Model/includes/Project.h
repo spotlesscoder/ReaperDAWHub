@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 #include "Entity.h/Entity.h"
 
 struct Project : Entity {
@@ -9,4 +10,9 @@ struct Project : Entity {
 	std::string version;
 	std::int64_t timeStampLastModified;
 	std::int64_t timeStampCreated;
+};
+
+struct Projects
+{
+	std::vector<Project> projects;
 };

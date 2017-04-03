@@ -8,12 +8,8 @@
 
 std::vector<Project> RestClient::getAvailableProjects() {
 	std::vector<Project> result;
-	Project p1;
-	p1.id = 1234;
-	p1.name = "1234";
-	p1.timeStampLastModified = 1233;
-	p1.ownerId = 33;
-	result.push_back(p1);
+	Projects p1 = JSONSerializer<Projects>::deserializeProjects(getProjects());
+	result.push_back(p1.projects[0]);
 	return result;
 }
 
@@ -52,6 +48,14 @@ std::string RestClient::getProjects()
 		bodyStream.read_to_end(inStringBuffer).get();
 		{
 			const std::string &text = inStringBuffer.collection();
+			const std::string json_data{
+				R"JSON({
+		  "id" : 1,
+		  "ownerId" : 1,
+		  "timeStampLastModified" : 1474884330,
+		  "timeStampCreated" : 1489255882000,
+		  "name" : "Test"
+		})JSON" };
 			return text;
 		};		
 	};	
