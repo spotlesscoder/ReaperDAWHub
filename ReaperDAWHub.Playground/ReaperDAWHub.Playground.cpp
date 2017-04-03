@@ -16,24 +16,7 @@ bool isReady(std::future<R> const& f)
 
 int main()
 {
-	ProjectsController pc;
 
-	std::cout << "requesting projs\n";
-	std::future<std::vector<Project>> f = std::async(std::launch::async, &ProjectsController::getProjects, &pc);
-	std::cout << "requested projs\n";
-	for (int i = 0; i < 10; i++) {
-		std::this_thread::sleep_for(std::chrono::microseconds(1000));
-		std::cout << i << "\n";
-	}
-
-	std::vector<Project> projs;
-	if (isReady(f)) {
-		projs = f.get();
-		std::cout << "got projs\n";
-	}
-	RestClient *rc = new RestClient();
-	rc->uploadProject(projs[0]);
-	std::cout << JSONSerializer<Project>::serialize(projs[0]);
 
     return 0;
 }
