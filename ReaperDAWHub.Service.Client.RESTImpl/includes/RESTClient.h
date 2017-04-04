@@ -1,16 +1,9 @@
 #pragma once
-#include <vector>
 #include "../../ReaperDAWHub.Model/includes/Project.h"
-#include "../../ReaperDAWHub.Service.Client.API/includes/IServiceClientAPI.h"
 
-class RestClient : public IServiceClientAPI {
+class RestClient {
 public:
 	RestClient();
-	std::vector<Project> getAvailableProjects();
-	std::vector<Project> getProjectsChangedSince(long timestampSince);
 	void uploadProject(Project project);
-
-private:
-	void sendData(std::string body);
 	std::string getProjects();
 };

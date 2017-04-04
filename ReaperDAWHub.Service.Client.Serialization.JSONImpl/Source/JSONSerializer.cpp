@@ -1,4 +1,3 @@
-#include "rapidjson/writer.h"
 #include "../../Thirdparty/json_dto/0.1/pub.hpp"
 #include "../includes/JSONSerializer.h"
 #include "../../ReaperDAWHub.Model/includes/Project.h"
@@ -6,7 +5,6 @@
 
 using namespace rapidjson;
 using namespace std;
-
 
 namespace json_dto
 {
@@ -17,7 +15,6 @@ namespace json_dto
 		io
 			&json_dto::mandatory("id", entity.id);
 	}
-
 
 	template < typename JSON_IO >
 	void
@@ -46,7 +43,6 @@ namespace json_dto
 		io
 			& json_dto::mandatory("strings", vector.strings);
 	}
-	
 } /* namespace json_dto */
 
 string JSONSerializer<Project>::serialize(Project project) {
@@ -57,8 +53,9 @@ Project JSONSerializer<Project>::deserializeProject(std::string projectString) {
 	return json_dto::from_json<Project>(projectString);
 }
 
-Projects JSONSerializer<Projects>::deserializeProjects(std::string projectString) {
-	return json_dto::from_json<Projects>(projectString);
+Projects JSONSerializer<Projects>::deserializeProjects(std::string projectsString) {
+	projectsString = "{\"projects\":" + projectsString + "}";
+	return json_dto::from_json<Projects>(projectsString);
 }
 
 vector_strings_t JSONSerializer<vector<string>>::deserializeStringArray(std::string arrayJSONString)

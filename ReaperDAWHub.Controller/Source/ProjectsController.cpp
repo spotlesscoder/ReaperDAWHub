@@ -5,9 +5,10 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include "../../ReaperDAWHub.Service.Client.Impl/includes/ServiceClient.h"
 
 ProjectsController::ProjectsController() {
-	serviceClient = new RestClient;
+	serviceClient = new ServiceClient();
 }
 
 std::vector<Project> ProjectsController::getProjects() {
@@ -15,7 +16,6 @@ std::vector<Project> ProjectsController::getProjects() {
 	if(serviceClient != nullptr) {
 		try
 		{
-			std::this_thread::sleep_for(std::chrono::microseconds(300));
 			std::cout << "controller requested projs\n";
 			result = serviceClient->getAvailableProjects();
 		}

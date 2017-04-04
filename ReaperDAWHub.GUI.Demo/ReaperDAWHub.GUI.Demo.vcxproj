@@ -95,7 +95,7 @@
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\ReaperDAWHub.GUI.Demo.exe</OutputFile>
-      <AdditionalDependencies>ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.Serialization.JSONImpl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ReaperDAWHub.Service.Client.Impl.lib;ReaperDAWHub.Service.Client.RESTImpl.lib;ReaperDAWHub.Service.Client.Serialization.JSONImpl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

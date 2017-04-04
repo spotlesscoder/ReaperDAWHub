@@ -100,7 +100,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ReaperDAWHub.Controller.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ReaperDAWHub.Controller.lib;ReaperDAWHub.Service.Client.Impl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(TargetDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

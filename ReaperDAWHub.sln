@@ -30,6 +30,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Playground", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.GUI.Controller", "ReaperDAWHub.GUI.Controller\ReaperDAWHub.GUI.Controller.vcxproj", "{F5019979-94E6-42CC-97B5-355B1F28778B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReaperDAWHub.Service.Client.Impl", "ReaperDAWHub.Service.Client.Impl\ReaperDAWHub.Service.Client.Impl.vcxproj", "{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -149,6 +151,14 @@ Global
 		{F5019979-94E6-42CC-97B5-355B1F28778B}.Release|Win32.Build.0 = Release|Win32
 		{F5019979-94E6-42CC-97B5-355B1F28778B}.Release|x64.ActiveCfg = Release|x64
 		{F5019979-94E6-42CC-97B5-355B1F28778B}.Release|x64.Build.0 = Release|x64
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Debug|Win32.Build.0 = Debug|Win32
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Debug|x64.ActiveCfg = Debug|x64
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Debug|x64.Build.0 = Debug|x64
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Release|Win32.ActiveCfg = Release|Win32
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Release|Win32.Build.0 = Release|Win32
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Release|x64.ActiveCfg = Release|x64
+		{5202A116-9F0D-4ABB-BA6B-8A6726A2DDBC}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

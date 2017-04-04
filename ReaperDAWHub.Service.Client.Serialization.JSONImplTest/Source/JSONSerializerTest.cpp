@@ -6,8 +6,8 @@
 using namespace std;
 
 string simpleProject = "{\"id\":1,\"ownerId\":1,\"timeStampLastModified\":1489255882000,\"timeStampCreated\":1489255882000,\"name\":\"Test\"}";
-string simpleSingleProjectInArray = "{\"projects\":[{\"id\":1, \"name\" : \"Test\", \"ownerId\" : 12137, \"timeStampLastModified\" : 1493244000000, \"timeStampCreated\" : 1492812000000}]}";
-string simpleMultipleProjectsInArray = "{\"projects\":[{\"id\":1, \"name\" : \"Test\", \"ownerId\" : 12137, \"timeStampLastModified\" : 1493244000000, \"timeStampCreated\" : 1492812000000},{\"id\":2, \"name\" : \"Test\", \"ownerId\" : 12137, \"timeStampLastModified\" : 1493244000000, \"timeStampCreated\" : 1492812000000}]}";
+string simpleSingleProjectInArray = "[{\"id\":1, \"name\" : \"Test\", \"ownerId\" : 12137, \"timeStampLastModified\" : 1493244000000, \"timeStampCreated\" : 1492812000000}]";
+string simpleMultipleProjectsInArray = "[{\"id\":1, \"name\" : \"Test\", \"ownerId\" : 12137, \"timeStampLastModified\" : 1493244000000, \"timeStampCreated\" : 1492812000000},{\"id\":2, \"name\" : \"Test\", \"ownerId\" : 12137, \"timeStampLastModified\" : 1493244000000, \"timeStampCreated\" : 1492812000000}]";
 string json_data = "{\"id\" : 1,\"ownerId\" : 1,  \"timeStampLastModified\" : 1474884330,	 \"timeStampCreated\" : 1489255882000,	 \"name\" : \"Test\"}";
 string stringarray = "{\"strings\":[\"test1\", \"test2\"]}";
 
