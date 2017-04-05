@@ -8,15 +8,25 @@ void ServiceClient::uploadProject(Project project)
 {
 }
 
-std::vector<Project> ServiceClient::getAvailableProjects() {
+std::vector<Project> ServiceClient::buildResultList(Projects p1)
+{
 	std::vector<Project> result;
-	Projects p1 = JSONSerializer<Projects>::deserializeProjects(restClient.getProjects());
 	for (Project proj : p1.projects)
 	{
 		result.push_back(proj);
 	}
-
 	return result;
+}
+
+std::vector<Project> ServiceClient::getAvailableProjects() {	
+	Projects projects = JSONSerializer<Projects>::deserializeProjects(restClient.getProjects());
+	return buildResultList(projects);
+}
+
+std::vector<Project> ServiceClient::getAvailableSharedProjects()
+{
+	Projects projects = JSONSerializer<Projects>::deserializeProjects(restClient.getProjects());
+	return buildResultList(projects);
 }
 
 std::vector<Project> ServiceClient::getProjectsChangedSince(long timestampSince) {

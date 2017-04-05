@@ -30,7 +30,10 @@ int main()
 	
 	RestClient *rc = new RestClient();
 	rc->uploadProject(projs[0]);
-	std::cout << JSONSerializer<Project>::serialize(projs[0]);
+	for(Project p : projs)
+	{
+		std::cout << JSONSerializer<Project>::serialize(p);
+	}
 	std::cout << JSONSerializer<Project>::serialize(projs[1]);
 
 

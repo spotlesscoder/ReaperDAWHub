@@ -3,8 +3,6 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/thread/thread.hpp> 
 #include <iostream>
-#include <chrono>
-#include <thread>
 #include "../../ReaperDAWHub.Service.Client.Impl/includes/ServiceClient.h"
 
 ProjectsController::ProjectsController() {
@@ -24,7 +22,6 @@ std::vector<Project> ProjectsController::getProjects() {
 
 		}
 	}
-	
 	return result;
 }
 

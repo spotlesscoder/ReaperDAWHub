@@ -6,7 +6,9 @@ class ServiceClient : public IServiceClientAPI
 {
 public:
 	void uploadProject(Project project) override;
+	std::vector<Project> buildResultList(Projects p1);
 	std::vector<Project> getAvailableProjects() override;
+	std::vector<Project> getAvailableSharedProjects() override;
 	std::vector<Project> getProjectsChangedSince(long timestampSince)override;
 
 private:

@@ -2,16 +2,15 @@
 #include "../../ReaperDAWHub.Model/includes/Project.h"
 #include <cpprest/http_client.h>
 #include <cpprest/rawptrstream.h>
-#include <cpprest/filestream.h>
 #include <ppltasks.h>
 
 void RestClient::uploadProject(Project project) {
 	
 }
 
-std::string RestClient::getProjects()
+std::string RestClient::getHttpRequestResponseString(utility::string_t requestUrl)
 {
-	web::http::client::http_client client(U("http://localhost:8080/projects"));
+	web::http::client::http_client client(requestUrl);
 
 	web::http::http_response response = client.request(web::http::methods::GET).get();
 	{
@@ -29,8 +28,19 @@ std::string RestClient::getProjects()
 			const std::string &text = inStringBuffer.collection();			
 			return text;
 		};		
-	};	
+	};
 }
+
+std::string RestClient::getProjects()
+{
+	return getHttpRequestResponseString(utility::conversions::to_string_t("http://localhost:8080/projects"));
+}
+
+std::string RestClient::getAvailableSharedProjects(std::int64_t userId)
+{
+	return getHttpRequestResponseString(utility::conversions::to_string_t("http://localhost:8080/users/" + std::to_string(userId) + "/availableSharedProjects"));
+}
+
 
 RestClient::RestClient() {
 
