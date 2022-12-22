@@ -1,2 +1,2 @@
-//Main.h
+// Main.h
 extern bool g_juce_inited;
